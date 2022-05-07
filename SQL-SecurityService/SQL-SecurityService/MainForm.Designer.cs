@@ -113,7 +113,7 @@
             // начальникиToolStripMenuItem
             // 
             this.начальникиToolStripMenuItem.Name = "начальникиToolStripMenuItem";
-            this.начальникиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.начальникиToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.начальникиToolStripMenuItem.Text = "Начальники";
             this.начальникиToolStripMenuItem.Click += new System.EventHandler(this.начальникиToolStripMenuItem_Click);
             // 

@@ -20,7 +20,5 @@ namespace SQL_SecurityService
             MainForm = new MainForm();
             Application.Run(MainForm);
         }
-
-
     }
 }
