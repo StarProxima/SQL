@@ -26,7 +26,15 @@ namespace SQL_SecurityService
 
         private void сохранитьИзмененияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                dataGridView1.DataSource = sQL_SecurityServiceDataSet.Сhiefs;
+                сhiefsTableAdapter.Update(sQL_SecurityServiceDataSet);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "error");
+            }
         }
 
         private void удалитьТекущуюЗаписьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,7 +55,8 @@ namespace SQL_SecurityService
 
         private void вернутьсяToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+            Program.MainForm.Activate();
         }
     }
 }
