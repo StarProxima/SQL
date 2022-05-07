@@ -23,11 +23,6 @@ namespace SQL_SecurityService
             String connectionString = "Data Source=DESKTOP-GABBJA4;Initial Catalog=SQL_SecurityService;Integrated Security=True";
             connect = new System.Data.SqlClient.SqlConnection(connectionString);
             connect.Open();
-
-
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Guards". При необходимости она может быть перемещена или удалена.
-            this.guardsTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Guards);
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -47,8 +42,10 @@ namespace SQL_SecurityService
 
         private void начальникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             Chiefs chiefs = new Chiefs();
             chiefs.Show();
+           
         }
     }
 }

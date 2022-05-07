@@ -23,5 +23,31 @@ namespace SQL_SecurityService
             this.сhiefsTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Сhiefs);
 
         }
+
+        private void сохранитьИзмененияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void удалитьТекущуюЗаписьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CurrencyManager CurMan = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];// в буферную таблицу записывается
+                                                                                                             // текущая таблица из DataGrid
+            if (CurMan.Count > 0) // если таблица не пустая
+            {
+                CurMan.RemoveAt(CurMan.Position);
+                сhiefsTableAdapter.Update(sQL_SecurityServiceDataSet);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void вернутьсяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
