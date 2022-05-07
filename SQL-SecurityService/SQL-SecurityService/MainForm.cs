@@ -47,5 +47,11 @@ namespace SQL_SecurityService
             chiefs.Show();
            
         }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
     }
 }
