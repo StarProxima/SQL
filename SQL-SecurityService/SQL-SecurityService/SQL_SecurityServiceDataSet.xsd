@@ -321,66 +321,49 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="SQL_SecurityServiceDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SQL_SecurityServiceDataSet" msprop:Generator_DataSetName="SQL_SecurityServiceDataSet">
+  <xs:element name="SQL_SecurityServiceDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SQL_SecurityServiceDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SQL_SecurityServiceDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Guards" msprop:Generator_RowEvHandlerName="GuardsRowChangeEventHandler" msprop:Generator_RowDeletedName="GuardsRowDeleted" msprop:Generator_RowDeletingName="GuardsRowDeleting" msprop:Generator_RowEvArgName="GuardsRowChangeEvent" msprop:Generator_TablePropName="Guards" msprop:Generator_RowChangedName="GuardsRowChanged" msprop:Generator_RowChangingName="GuardsRowChanging" msprop:Generator_TableClassName="GuardsDataTable" msprop:Generator_RowClassName="GuardsRow" msprop:Generator_TableVarName="tableGuards" msprop:Generator_UserTableName="Guards">
+        <xs:element name="Guards" msprop:Generator_RowClassName="GuardsRow" msprop:Generator_RowEvHandlerName="GuardsRowChangeEventHandler" msprop:Generator_RowDeletedName="GuardsRowDeleted" msprop:Generator_RowDeletingName="GuardsRowDeleting" msprop:Generator_RowEvArgName="GuardsRowChangeEvent" msprop:Generator_TablePropName="Guards" msprop:Generator_RowChangedName="GuardsRowChanged" msprop:Generator_UserTableName="Guards" msprop:Generator_RowChangingName="GuardsRowChanging" msprop:Generator_TableClassName="GuardsDataTable" msprop:Generator_TableVarName="tableGuards">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="GuardID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="GuardID" msprop:Generator_ColumnPropNameInTable="GuardIDColumn" msprop:Generator_ColumnVarNameInTable="columnGuardID" msprop:Generator_UserColumnName="GuardID" type="xs:int" />
-              <xs:element name="СhiefID" msprop:Generator_ColumnPropNameInRow="СhiefID" msprop:Generator_ColumnPropNameInTable="СhiefIDColumn" msprop:Generator_ColumnVarNameInTable="columnСhiefID" msprop:Generator_UserColumnName="СhiefID" type="xs:int" />
-              <xs:element name="FIO" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_ColumnVarNameInTable="columnFIO" msprop:Generator_UserColumnName="FIO">
+              <xs:element name="GuardID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="GuardID" msprop:Generator_ColumnPropNameInTable="GuardIDColumn" msprop:Generator_ColumnPropNameInRow="GuardID" msprop:Generator_ColumnVarNameInTable="columnGuardID" type="xs:int" />
+              <xs:element name="СhiefID" msprop:Generator_UserColumnName="СhiefID" msprop:Generator_ColumnPropNameInTable="СhiefIDColumn" msprop:Generator_ColumnPropNameInRow="СhiefID" msprop:Generator_ColumnVarNameInTable="columnСhiefID" type="xs:int" />
+              <xs:element name="FIO" msprop:Generator_UserColumnName="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnVarNameInTable="columnFIO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="WorkExperience" msprop:Generator_ColumnPropNameInRow="WorkExperience" msprop:Generator_ColumnPropNameInTable="WorkExperienceColumn" msprop:Generator_ColumnVarNameInTable="columnWorkExperience" msprop:Generator_UserColumnName="WorkExperience" type="xs:int" />
-              <xs:element name="Сategory" msprop:Generator_ColumnPropNameInRow="Сategory" msprop:Generator_ColumnPropNameInTable="СategoryColumn" msprop:Generator_ColumnVarNameInTable="columnСategory" msprop:Generator_UserColumnName="Сategory" type="xs:int" />
+              <xs:element name="WorkExperience" msprop:Generator_UserColumnName="WorkExperience" msprop:Generator_ColumnPropNameInTable="WorkExperienceColumn" msprop:Generator_ColumnPropNameInRow="WorkExperience" msprop:Generator_ColumnVarNameInTable="columnWorkExperience" type="xs:int" />
+              <xs:element name="Сategory" msprop:Generator_UserColumnName="Сategory" msprop:Generator_ColumnPropNameInTable="СategoryColumn" msprop:Generator_ColumnPropNameInRow="Сategory" msprop:Generator_ColumnVarNameInTable="columnСategory" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="OnDuty" msprop:Generator_RowEvHandlerName="OnDutyRowChangeEventHandler" msprop:Generator_RowDeletedName="OnDutyRowDeleted" msprop:Generator_RowDeletingName="OnDutyRowDeleting" msprop:Generator_RowEvArgName="OnDutyRowChangeEvent" msprop:Generator_TablePropName="OnDuty" msprop:Generator_RowChangedName="OnDutyRowChanged" msprop:Generator_RowChangingName="OnDutyRowChanging" msprop:Generator_TableClassName="OnDutyDataTable" msprop:Generator_RowClassName="OnDutyRow" msprop:Generator_TableVarName="tableOnDuty" msprop:Generator_UserTableName="OnDuty">
+        <xs:element name="OnDuty" msprop:Generator_RowClassName="OnDutyRow" msprop:Generator_RowEvHandlerName="OnDutyRowChangeEventHandler" msprop:Generator_RowDeletedName="OnDutyRowDeleted" msprop:Generator_RowDeletingName="OnDutyRowDeleting" msprop:Generator_RowEvArgName="OnDutyRowChangeEvent" msprop:Generator_TablePropName="OnDuty" msprop:Generator_RowChangedName="OnDutyRowChanged" msprop:Generator_UserTableName="OnDuty" msprop:Generator_RowChangingName="OnDutyRowChanging" msprop:Generator_TableClassName="OnDutyDataTable" msprop:Generator_TableVarName="tableOnDuty">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="OnDutyID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="OnDutyID" msprop:Generator_ColumnPropNameInTable="OnDutyIDColumn" msprop:Generator_ColumnVarNameInTable="columnOnDutyID" msprop:Generator_UserColumnName="OnDutyID" type="xs:int" />
-              <xs:element name="GuardID" msprop:Generator_ColumnPropNameInRow="GuardID" msprop:Generator_ColumnPropNameInTable="GuardIDColumn" msprop:Generator_ColumnVarNameInTable="columnGuardID" msprop:Generator_UserColumnName="GuardID" type="xs:int" />
-              <xs:element name="PostID" msprop:Generator_ColumnPropNameInRow="PostID" msprop:Generator_ColumnPropNameInTable="PostIDColumn" msprop:Generator_ColumnVarNameInTable="columnPostID" msprop:Generator_UserColumnName="PostID" type="xs:int" />
-              <xs:element name="СhiefID" msprop:Generator_ColumnPropNameInRow="СhiefID" msprop:Generator_ColumnPropNameInTable="СhiefIDColumn" msprop:Generator_ColumnVarNameInTable="columnСhiefID" msprop:Generator_UserColumnName="СhiefID" type="xs:int" />
-              <xs:element name="ExitTime" msprop:Generator_ColumnPropNameInRow="ExitTime" msprop:Generator_ColumnPropNameInTable="ExitTimeColumn" msprop:Generator_ColumnVarNameInTable="columnExitTime" msprop:Generator_UserColumnName="ExitTime" type="xs:dateTime" />
+              <xs:element name="OnDutyID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="OnDutyID" msprop:Generator_ColumnPropNameInTable="OnDutyIDColumn" msprop:Generator_ColumnPropNameInRow="OnDutyID" msprop:Generator_ColumnVarNameInTable="columnOnDutyID" type="xs:int" />
+              <xs:element name="GuardID" msprop:Generator_UserColumnName="GuardID" msprop:Generator_ColumnPropNameInTable="GuardIDColumn" msprop:Generator_ColumnPropNameInRow="GuardID" msprop:Generator_ColumnVarNameInTable="columnGuardID" type="xs:int" />
+              <xs:element name="PostID" msprop:Generator_UserColumnName="PostID" msprop:Generator_ColumnPropNameInTable="PostIDColumn" msprop:Generator_ColumnPropNameInRow="PostID" msprop:Generator_ColumnVarNameInTable="columnPostID" type="xs:int" />
+              <xs:element name="СhiefID" msprop:Generator_UserColumnName="СhiefID" msprop:Generator_ColumnPropNameInTable="СhiefIDColumn" msprop:Generator_ColumnPropNameInRow="СhiefID" msprop:Generator_ColumnVarNameInTable="columnСhiefID" type="xs:int" />
+              <xs:element name="ExitTime" msprop:Generator_UserColumnName="ExitTime" msprop:Generator_ColumnPropNameInTable="ExitTimeColumn" msprop:Generator_ColumnPropNameInRow="ExitTime" msprop:Generator_ColumnVarNameInTable="columnExitTime" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Posts" msprop:Generator_RowEvHandlerName="PostsRowChangeEventHandler" msprop:Generator_RowDeletedName="PostsRowDeleted" msprop:Generator_RowDeletingName="PostsRowDeleting" msprop:Generator_RowEvArgName="PostsRowChangeEvent" msprop:Generator_TablePropName="Posts" msprop:Generator_RowChangedName="PostsRowChanged" msprop:Generator_RowChangingName="PostsRowChanging" msprop:Generator_TableClassName="PostsDataTable" msprop:Generator_RowClassName="PostsRow" msprop:Generator_TableVarName="tablePosts" msprop:Generator_UserTableName="Posts">
+        <xs:element name="Posts" msprop:Generator_RowClassName="PostsRow" msprop:Generator_RowEvHandlerName="PostsRowChangeEventHandler" msprop:Generator_RowDeletedName="PostsRowDeleted" msprop:Generator_RowDeletingName="PostsRowDeleting" msprop:Generator_RowEvArgName="PostsRowChangeEvent" msprop:Generator_TablePropName="Posts" msprop:Generator_RowChangedName="PostsRowChanged" msprop:Generator_UserTableName="Posts" msprop:Generator_RowChangingName="PostsRowChanging" msprop:Generator_TableClassName="PostsDataTable" msprop:Generator_TableVarName="tablePosts">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="PostID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="PostID" msprop:Generator_ColumnPropNameInTable="PostIDColumn" msprop:Generator_ColumnVarNameInTable="columnPostID" msprop:Generator_UserColumnName="PostID" type="xs:int" />
-              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name">
+              <xs:element name="PostID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="PostID" msprop:Generator_ColumnPropNameInTable="PostIDColumn" msprop:Generator_ColumnPropNameInRow="PostID" msprop:Generator_ColumnVarNameInTable="columnPostID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Location" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_UserColumnName="Location">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="Remarks" msprop:Generator_RowEvHandlerName="RemarksRowChangeEventHandler" msprop:Generator_RowDeletedName="RemarksRowDeleted" msprop:Generator_RowDeletingName="RemarksRowDeleting" msprop:Generator_RowEvArgName="RemarksRowChangeEvent" msprop:Generator_TablePropName="Remarks" msprop:Generator_RowChangedName="RemarksRowChanged" msprop:Generator_RowChangingName="RemarksRowChanging" msprop:Generator_TableClassName="RemarksDataTable" msprop:Generator_RowClassName="RemarksRow" msprop:Generator_TableVarName="tableRemarks" msprop:Generator_UserTableName="Remarks">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="RemarkID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="RemarkID" msprop:Generator_ColumnPropNameInTable="RemarkIDColumn" msprop:Generator_ColumnVarNameInTable="columnRemarkID" msprop:Generator_UserColumnName="RemarkID" type="xs:int" />
-              <xs:element name="GuardID" msprop:Generator_ColumnPropNameInRow="GuardID" msprop:Generator_ColumnPropNameInTable="GuardIDColumn" msprop:Generator_ColumnVarNameInTable="columnGuardID" msprop:Generator_UserColumnName="GuardID" type="xs:int" />
-              <xs:element name="PostID" msprop:Generator_ColumnPropNameInRow="PostID" msprop:Generator_ColumnPropNameInTable="PostIDColumn" msprop:Generator_ColumnVarNameInTable="columnPostID" msprop:Generator_UserColumnName="PostID" type="xs:int" />
-              <xs:element name="СhiefID" msprop:Generator_ColumnPropNameInRow="СhiefID" msprop:Generator_ColumnPropNameInTable="СhiefIDColumn" msprop:Generator_ColumnVarNameInTable="columnСhiefID" msprop:Generator_UserColumnName="СhiefID" type="xs:int" />
-              <xs:element name="Remark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_UserColumnName="Remark">
+              <xs:element name="Location" msprop:Generator_UserColumnName="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnVarNameInTable="columnLocation">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -390,40 +373,57 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Сhiefs" msprop:Generator_RowEvHandlerName="СhiefsRowChangeEventHandler" msprop:Generator_RowDeletedName="СhiefsRowDeleted" msprop:Generator_RowDeletingName="СhiefsRowDeleting" msprop:Generator_RowEvArgName="СhiefsRowChangeEvent" msprop:Generator_TablePropName="Сhiefs" msprop:Generator_RowChangedName="СhiefsRowChanged" msprop:Generator_RowChangingName="СhiefsRowChanging" msprop:Generator_TableClassName="СhiefsDataTable" msprop:Generator_RowClassName="СhiefsRow" msprop:Generator_TableVarName="tableСhiefs" msprop:Generator_UserTableName="Сhiefs">
+        <xs:element name="Remarks" msprop:Generator_RowClassName="RemarksRow" msprop:Generator_RowEvHandlerName="RemarksRowChangeEventHandler" msprop:Generator_RowDeletedName="RemarksRowDeleted" msprop:Generator_RowDeletingName="RemarksRowDeleting" msprop:Generator_RowEvArgName="RemarksRowChangeEvent" msprop:Generator_TablePropName="Remarks" msprop:Generator_RowChangedName="RemarksRowChanged" msprop:Generator_UserTableName="Remarks" msprop:Generator_RowChangingName="RemarksRowChanging" msprop:Generator_TableClassName="RemarksDataTable" msprop:Generator_TableVarName="tableRemarks">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="СhiefID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="СhiefID" msprop:Generator_ColumnPropNameInTable="СhiefIDColumn" msprop:Generator_ColumnVarNameInTable="columnСhiefID" msprop:Generator_UserColumnName="СhiefID" type="xs:int" />
-              <xs:element name="FIO" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_ColumnVarNameInTable="columnFIO" msprop:Generator_UserColumnName="FIO">
+              <xs:element name="RemarkID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="RemarkID" msprop:Generator_ColumnPropNameInTable="RemarkIDColumn" msprop:Generator_ColumnPropNameInRow="RemarkID" msprop:Generator_ColumnVarNameInTable="columnRemarkID" type="xs:int" />
+              <xs:element name="GuardID" msprop:Generator_UserColumnName="GuardID" msprop:Generator_ColumnPropNameInTable="GuardIDColumn" msprop:Generator_ColumnPropNameInRow="GuardID" msprop:Generator_ColumnVarNameInTable="columnGuardID" type="xs:int" />
+              <xs:element name="PostID" msprop:Generator_UserColumnName="PostID" msprop:Generator_ColumnPropNameInTable="PostIDColumn" msprop:Generator_ColumnPropNameInRow="PostID" msprop:Generator_ColumnVarNameInTable="columnPostID" type="xs:int" />
+              <xs:element name="СhiefID" msprop:Generator_UserColumnName="СhiefID" msprop:Generator_ColumnPropNameInTable="СhiefIDColumn" msprop:Generator_ColumnPropNameInRow="СhiefID" msprop:Generator_ColumnVarNameInTable="columnСhiefID" type="xs:int" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="WorkExperience" msprop:Generator_ColumnPropNameInRow="WorkExperience" msprop:Generator_ColumnPropNameInTable="WorkExperienceColumn" msprop:Generator_ColumnVarNameInTable="columnWorkExperience" msprop:Generator_UserColumnName="WorkExperience" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_1" msprop:Generator_RowEvHandlerName="View_1RowChangeEventHandler" msprop:Generator_RowDeletedName="View_1RowDeleted" msprop:Generator_RowDeletingName="View_1RowDeleting" msprop:Generator_RowEvArgName="View_1RowChangeEvent" msprop:Generator_TablePropName="View_1" msprop:Generator_RowChangedName="View_1RowChanged" msprop:Generator_RowChangingName="View_1RowChanging" msprop:Generator_TableClassName="View_1DataTable" msprop:Generator_RowClassName="View_1Row" msprop:Generator_TableVarName="tableView_1" msprop:Generator_UserTableName="View_1">
+        <xs:element name="Сhiefs" msprop:Generator_RowClassName="СhiefsRow" msprop:Generator_RowEvHandlerName="СhiefsRowChangeEventHandler" msprop:Generator_RowDeletedName="СhiefsRowDeleted" msprop:Generator_RowDeletingName="СhiefsRowDeleting" msprop:Generator_RowEvArgName="СhiefsRowChangeEvent" msprop:Generator_TablePropName="Сhiefs" msprop:Generator_RowChangedName="СhiefsRowChanged" msprop:Generator_UserTableName="Сhiefs" msprop:Generator_RowChangingName="СhiefsRowChanging" msprop:Generator_TableClassName="СhiefsDataTable" msprop:Generator_TableVarName="tableСhiefs">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Пост" msprop:Generator_ColumnPropNameInRow="Пост" msprop:Generator_ColumnPropNameInTable="ПостColumn" msprop:Generator_ColumnVarNameInTable="columnПост" msprop:Generator_UserColumnName="Пост">
+              <xs:element name="СhiefID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="СhiefID" msprop:Generator_ColumnPropNameInTable="СhiefIDColumn" msprop:Generator_ColumnPropNameInRow="СhiefID" msprop:Generator_ColumnVarNameInTable="columnСhiefID" type="xs:int" />
+              <xs:element name="FIO" msprop:Generator_UserColumnName="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnVarNameInTable="columnFIO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Охранник" msprop:Generator_ColumnPropNameInRow="Охранник" msprop:Generator_ColumnPropNameInTable="ОхранникColumn" msprop:Generator_ColumnVarNameInTable="columnОхранник" msprop:Generator_UserColumnName="Охранник">
+              <xs:element name="WorkExperience" msprop:Generator_UserColumnName="WorkExperience" msprop:Generator_ColumnPropNameInTable="WorkExperienceColumn" msprop:Generator_ColumnPropNameInRow="WorkExperience" msprop:Generator_ColumnVarNameInTable="columnWorkExperience" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_1" msprop:Generator_RowClassName="View_1Row" msprop:Generator_RowEvHandlerName="View_1RowChangeEventHandler" msprop:Generator_RowDeletedName="View_1RowDeleted" msprop:Generator_RowDeletingName="View_1RowDeleting" msprop:Generator_RowEvArgName="View_1RowChangeEvent" msprop:Generator_TablePropName="View_1" msprop:Generator_RowChangedName="View_1RowChanged" msprop:Generator_UserTableName="View_1" msprop:Generator_RowChangingName="View_1RowChanging" msprop:Generator_TableClassName="View_1DataTable" msprop:Generator_TableVarName="tableView_1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Пост" msprop:Generator_UserColumnName="Пост" msprop:Generator_ColumnPropNameInTable="ПостColumn" msprop:Generator_ColumnPropNameInRow="Пост" msprop:Generator_ColumnVarNameInTable="columnПост">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Время_x0020_выхода" msprop:Generator_ColumnPropNameInRow="Время_выхода" msprop:Generator_ColumnPropNameInTable="Время_выходаColumn" msprop:Generator_ColumnVarNameInTable="columnВремя_выхода" msprop:Generator_UserColumnName="Время выхода" type="xs:dateTime" />
-              <xs:element name="Начальник" msprop:Generator_ColumnPropNameInRow="Начальник" msprop:Generator_ColumnPropNameInTable="НачальникColumn" msprop:Generator_ColumnVarNameInTable="columnНачальник" msprop:Generator_UserColumnName="Начальник">
+              <xs:element name="Охранник" msprop:Generator_UserColumnName="Охранник" msprop:Generator_ColumnPropNameInTable="ОхранникColumn" msprop:Generator_ColumnPropNameInRow="Охранник" msprop:Generator_ColumnVarNameInTable="columnОхранник">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Время_x0020_выхода" msprop:Generator_UserColumnName="Время выхода" msprop:Generator_ColumnPropNameInTable="Время_выходаColumn" msprop:Generator_ColumnPropNameInRow="Время_выхода" msprop:Generator_ColumnVarNameInTable="columnВремя_выхода" type="xs:dateTime" />
+              <xs:element name="Начальник" msprop:Generator_UserColumnName="Начальник" msprop:Generator_ColumnPropNameInTable="НачальникColumn" msprop:Generator_ColumnPropNameInRow="Начальник" msprop:Generator_ColumnVarNameInTable="columnНачальник">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -458,13 +458,13 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Guards__СhiefID__32E0915F" msdata:parent="Сhiefs" msdata:child="Guards" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="Guards" msprop:Generator_RelationVarName="relationFK__Guards__СhiefID__32E0915F" msprop:Generator_UserRelationName="FK__Guards__СhiefID__32E0915F" msprop:Generator_ChildPropName="GetGuardsRows" msprop:Generator_ParentPropName="СhiefsRow" />
-      <msdata:Relationship name="FK__OnDuty__GuardID__300424B4" msdata:parent="Guards" msdata:child="OnDuty" msdata:parentkey="GuardID" msdata:childkey="GuardID" msprop:Generator_UserParentTable="Guards" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__GuardID__300424B4" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_ParentPropName="GuardsRow" msprop:Generator_UserRelationName="FK__OnDuty__GuardID__300424B4" />
-      <msdata:Relationship name="FK__OnDuty__PostID__30F848ED" msdata:parent="Posts" msdata:child="OnDuty" msdata:parentkey="PostID" msdata:childkey="PostID" msprop:Generator_UserParentTable="Posts" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__PostID__30F848ED" msprop:Generator_UserRelationName="FK__OnDuty__PostID__30F848ED" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_ParentPropName="PostsRow" />
-      <msdata:Relationship name="FK__OnDuty__СhiefID__31EC6D26" msdata:parent="Сhiefs" msdata:child="OnDuty" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__СhiefID__31EC6D26" msprop:Generator_UserRelationName="FK__OnDuty__СhiefID__31EC6D26" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_ParentPropName="СhiefsRow" />
-      <msdata:Relationship name="FK__Remarks__GuardID__2D27B809" msdata:parent="Guards" msdata:child="Remarks" msdata:parentkey="GuardID" msdata:childkey="GuardID" msprop:Generator_UserParentTable="Guards" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__GuardID__2D27B809" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_ParentPropName="GuardsRow" msprop:Generator_UserRelationName="FK__Remarks__GuardID__2D27B809" />
-      <msdata:Relationship name="FK__Remarks__PostID__2E1BDC42" msdata:parent="Posts" msdata:child="Remarks" msdata:parentkey="PostID" msdata:childkey="PostID" msprop:Generator_UserParentTable="Posts" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__PostID__2E1BDC42" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_ParentPropName="PostsRow" msprop:Generator_UserRelationName="FK__Remarks__PostID__2E1BDC42" />
-      <msdata:Relationship name="FK__Remarks__СhiefID__2F10007B" msdata:parent="Сhiefs" msdata:child="Remarks" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__СhiefID__2F10007B" msprop:Generator_UserRelationName="FK__Remarks__СhiefID__2F10007B" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_ParentPropName="СhiefsRow" />
+      <msdata:Relationship name="FK__Guards__СhiefID__32E0915F" msdata:parent="Сhiefs" msdata:child="Guards" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="Guards" msprop:Generator_RelationVarName="relationFK__Guards__СhiefID__32E0915F" msprop:Generator_ChildPropName="GetGuardsRows" msprop:Generator_ParentPropName="СhiefsRow" msprop:Generator_UserRelationName="FK__Guards__СhiefID__32E0915F" />
+      <msdata:Relationship name="FK__OnDuty__GuardID__300424B4" msdata:parent="Guards" msdata:child="OnDuty" msdata:parentkey="GuardID" msdata:childkey="GuardID" msprop:Generator_UserParentTable="Guards" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__GuardID__300424B4" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_UserRelationName="FK__OnDuty__GuardID__300424B4" msprop:Generator_ParentPropName="GuardsRow" />
+      <msdata:Relationship name="FK__OnDuty__PostID__30F848ED" msdata:parent="Posts" msdata:child="OnDuty" msdata:parentkey="PostID" msdata:childkey="PostID" msprop:Generator_UserParentTable="Posts" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__PostID__30F848ED" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_ParentPropName="PostsRow" msprop:Generator_UserRelationName="FK__OnDuty__PostID__30F848ED" />
+      <msdata:Relationship name="FK__OnDuty__СhiefID__31EC6D26" msdata:parent="Сhiefs" msdata:child="OnDuty" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__СhiefID__31EC6D26" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_ParentPropName="СhiefsRow" msprop:Generator_UserRelationName="FK__OnDuty__СhiefID__31EC6D26" />
+      <msdata:Relationship name="FK__Remarks__GuardID__2D27B809" msdata:parent="Guards" msdata:child="Remarks" msdata:parentkey="GuardID" msdata:childkey="GuardID" msprop:Generator_UserParentTable="Guards" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__GuardID__2D27B809" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_UserRelationName="FK__Remarks__GuardID__2D27B809" msprop:Generator_ParentPropName="GuardsRow" />
+      <msdata:Relationship name="FK__Remarks__PostID__2E1BDC42" msdata:parent="Posts" msdata:child="Remarks" msdata:parentkey="PostID" msdata:childkey="PostID" msprop:Generator_UserParentTable="Posts" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__PostID__2E1BDC42" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_UserRelationName="FK__Remarks__PostID__2E1BDC42" msprop:Generator_ParentPropName="PostsRow" />
+      <msdata:Relationship name="FK__Remarks__СhiefID__2F10007B" msdata:parent="Сhiefs" msdata:child="Remarks" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__СhiefID__2F10007B" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_ParentPropName="СhiefsRow" msprop:Generator_UserRelationName="FK__Remarks__СhiefID__2F10007B" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

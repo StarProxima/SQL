@@ -29,5 +29,26 @@ namespace SQL_SecurityService
             this.guardsTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Guards);
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void данныеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void охранникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void начальникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Chiefs chiefs = new Chiefs();
+            chiefs.Show();
+        }
     }
 }

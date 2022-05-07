@@ -35,18 +35,16 @@
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
             this.sQLSecurityServiceDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter();
-            this.guardIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.сhiefIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workExperienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.сategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.начальникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.охранникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.постыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.дежурстваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.замечанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLSecurityServiceDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardsBindingSource)).BeginInit();
@@ -69,12 +67,20 @@
             // 
             // данныеToolStripMenuItem
             // 
+            this.данныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.охранникиToolStripMenuItem,
+            this.постыToolStripMenuItem,
+            this.дежурстваToolStripMenuItem,
+            this.замечанияToolStripMenuItem});
             this.данныеToolStripMenuItem.Name = "данныеToolStripMenuItem";
             this.данныеToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.данныеToolStripMenuItem.Text = "Данные";
+            this.данныеToolStripMenuItem.Click += new System.EventHandler(this.данныеToolStripMenuItem_Click);
             // 
             // справочникиToolStripMenuItem
             // 
+            this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.начальникиToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
             this.справочникиToolStripMenuItem.Text = "Справочники";
@@ -97,24 +103,6 @@
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.guardIDDataGridViewTextBoxColumn,
-            this.сhiefIDDataGridViewTextBoxColumn,
-            this.fIODataGridViewTextBoxColumn,
-            this.workExperienceDataGridViewTextBoxColumn,
-            this.сategoryDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.guardsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 407);
-            this.dataGridView1.TabIndex = 1;
-            // 
             // sQL_SecurityServiceDataSet
             // 
             this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
@@ -134,53 +122,43 @@
             // 
             this.guardsTableAdapter.ClearBeforeFill = true;
             // 
-            // guardIDDataGridViewTextBoxColumn
+            // начальникиToolStripMenuItem
             // 
-            this.guardIDDataGridViewTextBoxColumn.DataPropertyName = "GuardID";
-            this.guardIDDataGridViewTextBoxColumn.HeaderText = "GuardID";
-            this.guardIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.guardIDDataGridViewTextBoxColumn.Name = "guardIDDataGridViewTextBoxColumn";
-            this.guardIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.guardIDDataGridViewTextBoxColumn.Width = 125;
+            this.начальникиToolStripMenuItem.Name = "начальникиToolStripMenuItem";
+            this.начальникиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.начальникиToolStripMenuItem.Text = "Начальники";
+            this.начальникиToolStripMenuItem.Click += new System.EventHandler(this.начальникиToolStripMenuItem_Click);
             // 
-            // сhiefIDDataGridViewTextBoxColumn
+            // охранникиToolStripMenuItem
             // 
-            this.сhiefIDDataGridViewTextBoxColumn.DataPropertyName = "СhiefID";
-            this.сhiefIDDataGridViewTextBoxColumn.HeaderText = "СhiefID";
-            this.сhiefIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.сhiefIDDataGridViewTextBoxColumn.Name = "сhiefIDDataGridViewTextBoxColumn";
-            this.сhiefIDDataGridViewTextBoxColumn.Width = 125;
+            this.охранникиToolStripMenuItem.Name = "охранникиToolStripMenuItem";
+            this.охранникиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.охранникиToolStripMenuItem.Text = "Охранники";
+            this.охранникиToolStripMenuItem.Click += new System.EventHandler(this.охранникиToolStripMenuItem_Click);
             // 
-            // fIODataGridViewTextBoxColumn
+            // постыToolStripMenuItem
             // 
-            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
-            this.fIODataGridViewTextBoxColumn.HeaderText = "FIO";
-            this.fIODataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
-            this.fIODataGridViewTextBoxColumn.Width = 125;
+            this.постыToolStripMenuItem.Name = "постыToolStripMenuItem";
+            this.постыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.постыToolStripMenuItem.Text = "Посты";
             // 
-            // workExperienceDataGridViewTextBoxColumn
+            // дежурстваToolStripMenuItem
             // 
-            this.workExperienceDataGridViewTextBoxColumn.DataPropertyName = "WorkExperience";
-            this.workExperienceDataGridViewTextBoxColumn.HeaderText = "WorkExperience";
-            this.workExperienceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.workExperienceDataGridViewTextBoxColumn.Name = "workExperienceDataGridViewTextBoxColumn";
-            this.workExperienceDataGridViewTextBoxColumn.Width = 125;
+            this.дежурстваToolStripMenuItem.Name = "дежурстваToolStripMenuItem";
+            this.дежурстваToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.дежурстваToolStripMenuItem.Text = "Дежурства";
             // 
-            // сategoryDataGridViewTextBoxColumn
+            // замечанияToolStripMenuItem
             // 
-            this.сategoryDataGridViewTextBoxColumn.DataPropertyName = "Сategory";
-            this.сategoryDataGridViewTextBoxColumn.HeaderText = "Сategory";
-            this.сategoryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.сategoryDataGridViewTextBoxColumn.Name = "сategoryDataGridViewTextBoxColumn";
-            this.сategoryDataGridViewTextBoxColumn.Width = 125;
+            this.замечанияToolStripMenuItem.Name = "замечанияToolStripMenuItem";
+            this.замечанияToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.замечанияToolStripMenuItem.Text = "Замечания";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
@@ -188,7 +166,6 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLSecurityServiceDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardsBindingSource)).EndInit();
@@ -205,16 +182,15 @@
         private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource sQLSecurityServiceDataSetBindingSource;
         private SQL_SecurityServiceDataSet sQL_SecurityServiceDataSet;
         private System.Windows.Forms.BindingSource guardsBindingSource;
         private SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter guardsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn guardIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn сhiefIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn workExperienceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn сategoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem охранникиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem постыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem дежурстваToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem замечанияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem начальникиToolStripMenuItem;
     }
 }
 
