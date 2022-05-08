@@ -34,7 +34,7 @@ namespace SQL_SecurityService {
         
         private СhiefsDataTable tableСhiefs;
         
-        private View_1DataTable tableView_1;
+        private Guards_viewDataTable tableGuards_view;
         
         private global::System.Data.DataRelation relationFK__Guards__СhiefID__32E0915F;
         
@@ -93,8 +93,8 @@ namespace SQL_SecurityService {
                 if ((ds.Tables["Сhiefs"] != null)) {
                     base.Tables.Add(new СhiefsDataTable(ds.Tables["Сhiefs"]));
                 }
-                if ((ds.Tables["View_1"] != null)) {
-                    base.Tables.Add(new View_1DataTable(ds.Tables["View_1"]));
+                if ((ds.Tables["Guards_view"] != null)) {
+                    base.Tables.Add(new Guards_viewDataTable(ds.Tables["Guards_view"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -168,9 +168,9 @@ namespace SQL_SecurityService {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_1DataTable View_1 {
+        public Guards_viewDataTable Guards_view {
             get {
-                return this.tableView_1;
+                return this.tableGuards_view;
             }
         }
         
@@ -256,8 +256,8 @@ namespace SQL_SecurityService {
                 if ((ds.Tables["Сhiefs"] != null)) {
                     base.Tables.Add(new СhiefsDataTable(ds.Tables["Сhiefs"]));
                 }
-                if ((ds.Tables["View_1"] != null)) {
-                    base.Tables.Add(new View_1DataTable(ds.Tables["View_1"]));
+                if ((ds.Tables["Guards_view"] != null)) {
+                    base.Tables.Add(new Guards_viewDataTable(ds.Tables["Guards_view"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -322,10 +322,10 @@ namespace SQL_SecurityService {
                     this.tableСhiefs.InitVars();
                 }
             }
-            this.tableView_1 = ((View_1DataTable)(base.Tables["View_1"]));
+            this.tableGuards_view = ((Guards_viewDataTable)(base.Tables["Guards_view"]));
             if ((initTable == true)) {
-                if ((this.tableView_1 != null)) {
-                    this.tableView_1.InitVars();
+                if ((this.tableGuards_view != null)) {
+                    this.tableGuards_view.InitVars();
                 }
             }
             this.relationFK__Guards__СhiefID__32E0915F = this.Relations["FK__Guards__СhiefID__32E0915F"];
@@ -355,8 +355,8 @@ namespace SQL_SecurityService {
             base.Tables.Add(this.tableRemarks);
             this.tableСhiefs = new СhiefsDataTable();
             base.Tables.Add(this.tableСhiefs);
-            this.tableView_1 = new View_1DataTable();
-            base.Tables.Add(this.tableView_1);
+            this.tableGuards_view = new Guards_viewDataTable();
+            base.Tables.Add(this.tableGuards_view);
             this.relationFK__Guards__СhiefID__32E0915F = new global::System.Data.DataRelation("FK__Guards__СhiefID__32E0915F", new global::System.Data.DataColumn[] {
                         this.tableСhiefs.СhiefIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableGuards.СhiefIDColumn}, false);
@@ -419,7 +419,7 @@ namespace SQL_SecurityService {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeView_1() {
+        private bool ShouldSerializeGuards_view() {
             return false;
         }
         
@@ -494,7 +494,7 @@ namespace SQL_SecurityService {
         public delegate void СhiefsRowChangeEventHandler(object sender, СhiefsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void View_1RowChangeEventHandler(object sender, View_1RowChangeEvent e);
+        public delegate void Guards_viewRowChangeEventHandler(object sender, Guards_viewRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2077,20 +2077,24 @@ namespace SQL_SecurityService {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_1DataTable : global::System.Data.TypedTableBase<View_1Row> {
+        public partial class Guards_viewDataTable : global::System.Data.TypedTableBase<Guards_viewRow> {
             
-            private global::System.Data.DataColumn columnПост;
+            private global::System.Data.DataColumn columnGuardID;
             
-            private global::System.Data.DataColumn columnОхранник;
+            private global::System.Data.DataColumn columnFIO;
             
-            private global::System.Data.DataColumn columnВремя_выхода;
+            private global::System.Data.DataColumn columnWorkExperience;
             
-            private global::System.Data.DataColumn columnНачальник;
+            private global::System.Data.DataColumn columnCategory;
+            
+            private global::System.Data.DataColumn columnChief_FIO;
+            
+            private global::System.Data.DataColumn columnChief_WorkExperience;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1DataTable() {
-                this.TableName = "View_1";
+            public Guards_viewDataTable() {
+                this.TableName = "Guards_view";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2098,7 +2102,7 @@ namespace SQL_SecurityService {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_1DataTable(global::System.Data.DataTable table) {
+            internal Guards_viewDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2115,40 +2119,56 @@ namespace SQL_SecurityService {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected View_1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Guards_viewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ПостColumn {
+            public global::System.Data.DataColumn GuardIDColumn {
                 get {
-                    return this.columnПост;
+                    return this.columnGuardID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ОхранникColumn {
+            public global::System.Data.DataColumn FIOColumn {
                 get {
-                    return this.columnОхранник;
+                    return this.columnFIO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Время_выходаColumn {
+            public global::System.Data.DataColumn WorkExperienceColumn {
                 get {
-                    return this.columnВремя_выхода;
+                    return this.columnWorkExperience;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn НачальникColumn {
+            public global::System.Data.DataColumn CategoryColumn {
                 get {
-                    return this.columnНачальник;
+                    return this.columnCategory;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Chief_FIOColumn {
+                get {
+                    return this.columnChief_FIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Chief_WorkExperienceColumn {
+                get {
+                    return this.columnChief_WorkExperience;
                 }
             }
             
@@ -2163,48 +2183,57 @@ namespace SQL_SecurityService {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row this[int index] {
+            public Guards_viewRow this[int index] {
                 get {
-                    return ((View_1Row)(this.Rows[index]));
+                    return ((Guards_viewRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_1RowChangeEventHandler View_1RowChanging;
+            public event Guards_viewRowChangeEventHandler Guards_viewRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_1RowChangeEventHandler View_1RowChanged;
+            public event Guards_viewRowChangeEventHandler Guards_viewRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_1RowChangeEventHandler View_1RowDeleting;
+            public event Guards_viewRowChangeEventHandler Guards_viewRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_1RowChangeEventHandler View_1RowDeleted;
+            public event Guards_viewRowChangeEventHandler Guards_viewRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddView_1Row(View_1Row row) {
+            public void AddGuards_viewRow(Guards_viewRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row AddView_1Row(string Пост, string Охранник, System.DateTime Время_выхода, string Начальник) {
-                View_1Row rowView_1Row = ((View_1Row)(this.NewRow()));
+            public Guards_viewRow AddGuards_viewRow(int GuardID, string FIO, int WorkExperience, int Category, string Chief_FIO, int Chief_WorkExperience) {
+                Guards_viewRow rowGuards_viewRow = ((Guards_viewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Пост,
-                        Охранник,
-                        Время_выхода,
-                        Начальник};
-                rowView_1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_1Row);
-                return rowView_1Row;
+                        GuardID,
+                        FIO,
+                        WorkExperience,
+                        Category,
+                        Chief_FIO,
+                        Chief_WorkExperience};
+                rowGuards_viewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGuards_viewRow);
+                return rowGuards_viewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Guards_viewRow FindByGuardID(int GuardID) {
+                return ((Guards_viewRow)(this.Rows.Find(new object[] {
+                            GuardID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                View_1DataTable cln = ((View_1DataTable)(base.Clone()));
+                Guards_viewDataTable cln = ((Guards_viewDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2212,62 +2241,72 @@ namespace SQL_SecurityService {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new View_1DataTable();
+                return new Guards_viewDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnПост = base.Columns["Пост"];
-                this.columnОхранник = base.Columns["Охранник"];
-                this.columnВремя_выхода = base.Columns["Время выхода"];
-                this.columnНачальник = base.Columns["Начальник"];
+                this.columnGuardID = base.Columns["GuardID"];
+                this.columnFIO = base.Columns["FIO"];
+                this.columnWorkExperience = base.Columns["WorkExperience"];
+                this.columnCategory = base.Columns["Category"];
+                this.columnChief_FIO = base.Columns["Chief FIO"];
+                this.columnChief_WorkExperience = base.Columns["Chief WorkExperience"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnПост = new global::System.Data.DataColumn("Пост", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnПост);
-                this.columnОхранник = new global::System.Data.DataColumn("Охранник", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnОхранник);
-                this.columnВремя_выхода = new global::System.Data.DataColumn("Время выхода", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnВремя_выхода);
-                this.columnНачальник = new global::System.Data.DataColumn("Начальник", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНачальник);
-                this.columnПост.AllowDBNull = false;
-                this.columnПост.MaxLength = 100;
-                this.columnОхранник.AllowDBNull = false;
-                this.columnОхранник.MaxLength = 100;
-                this.columnВремя_выхода.AllowDBNull = false;
-                this.columnНачальник.AllowDBNull = false;
-                this.columnНачальник.MaxLength = 100;
+                this.columnGuardID = new global::System.Data.DataColumn("GuardID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGuardID);
+                this.columnFIO = new global::System.Data.DataColumn("FIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFIO);
+                this.columnWorkExperience = new global::System.Data.DataColumn("WorkExperience", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWorkExperience);
+                this.columnCategory = new global::System.Data.DataColumn("Category", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory);
+                this.columnChief_FIO = new global::System.Data.DataColumn("Chief FIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChief_FIO);
+                this.columnChief_WorkExperience = new global::System.Data.DataColumn("Chief WorkExperience", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChief_WorkExperience);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnGuardID}, true));
+                this.columnGuardID.AllowDBNull = false;
+                this.columnGuardID.Unique = true;
+                this.columnFIO.AllowDBNull = false;
+                this.columnFIO.MaxLength = 100;
+                this.columnWorkExperience.AllowDBNull = false;
+                this.columnCategory.AllowDBNull = false;
+                this.columnChief_FIO.AllowDBNull = false;
+                this.columnChief_FIO.MaxLength = 100;
+                this.columnChief_WorkExperience.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row NewView_1Row() {
-                return ((View_1Row)(this.NewRow()));
+            public Guards_viewRow NewGuards_viewRow() {
+                return ((Guards_viewRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_1Row(builder);
+                return new Guards_viewRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(View_1Row);
+                return typeof(Guards_viewRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.View_1RowChanged != null)) {
-                    this.View_1RowChanged(this, new View_1RowChangeEvent(((View_1Row)(e.Row)), e.Action));
+                if ((this.Guards_viewRowChanged != null)) {
+                    this.Guards_viewRowChanged(this, new Guards_viewRowChangeEvent(((Guards_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2275,8 +2314,8 @@ namespace SQL_SecurityService {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.View_1RowChanging != null)) {
-                    this.View_1RowChanging(this, new View_1RowChangeEvent(((View_1Row)(e.Row)), e.Action));
+                if ((this.Guards_viewRowChanging != null)) {
+                    this.Guards_viewRowChanging(this, new Guards_viewRowChangeEvent(((Guards_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2284,8 +2323,8 @@ namespace SQL_SecurityService {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.View_1RowDeleted != null)) {
-                    this.View_1RowDeleted(this, new View_1RowChangeEvent(((View_1Row)(e.Row)), e.Action));
+                if ((this.Guards_viewRowDeleted != null)) {
+                    this.Guards_viewRowDeleted(this, new Guards_viewRowChangeEvent(((Guards_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2293,14 +2332,14 @@ namespace SQL_SecurityService {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.View_1RowDeleting != null)) {
-                    this.View_1RowDeleting(this, new View_1RowChangeEvent(((View_1Row)(e.Row)), e.Action));
+                if ((this.Guards_viewRowDeleting != null)) {
+                    this.Guards_viewRowDeleting(this, new Guards_viewRowChangeEvent(((Guards_viewRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveView_1Row(View_1Row row) {
+            public void RemoveGuards_viewRow(Guards_viewRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2327,7 +2366,7 @@ namespace SQL_SecurityService {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_1DataTable";
+                attribute2.FixedValue = "Guards_viewDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2831,58 +2870,80 @@ namespace SQL_SecurityService {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class View_1Row : global::System.Data.DataRow {
+        public partial class Guards_viewRow : global::System.Data.DataRow {
             
-            private View_1DataTable tableView_1;
+            private Guards_viewDataTable tableGuards_view;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_1Row(global::System.Data.DataRowBuilder rb) : 
+            internal Guards_viewRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableView_1 = ((View_1DataTable)(this.Table));
+                this.tableGuards_view = ((Guards_viewDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Пост {
+            public int GuardID {
                 get {
-                    return ((string)(this[this.tableView_1.ПостColumn]));
+                    return ((int)(this[this.tableGuards_view.GuardIDColumn]));
                 }
                 set {
-                    this[this.tableView_1.ПостColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Охранник {
-                get {
-                    return ((string)(this[this.tableView_1.ОхранникColumn]));
-                }
-                set {
-                    this[this.tableView_1.ОхранникColumn] = value;
+                    this[this.tableGuards_view.GuardIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime Время_выхода {
+            public string FIO {
                 get {
-                    return ((global::System.DateTime)(this[this.tableView_1.Время_выходаColumn]));
+                    return ((string)(this[this.tableGuards_view.FIOColumn]));
                 }
                 set {
-                    this[this.tableView_1.Время_выходаColumn] = value;
+                    this[this.tableGuards_view.FIOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Начальник {
+            public int WorkExperience {
                 get {
-                    return ((string)(this[this.tableView_1.НачальникColumn]));
+                    return ((int)(this[this.tableGuards_view.WorkExperienceColumn]));
                 }
                 set {
-                    this[this.tableView_1.НачальникColumn] = value;
+                    this[this.tableGuards_view.WorkExperienceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Category {
+                get {
+                    return ((int)(this[this.tableGuards_view.CategoryColumn]));
+                }
+                set {
+                    this[this.tableGuards_view.CategoryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Chief_FIO {
+                get {
+                    return ((string)(this[this.tableGuards_view.Chief_FIOColumn]));
+                }
+                set {
+                    this[this.tableGuards_view.Chief_FIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Chief_WorkExperience {
+                get {
+                    return ((int)(this[this.tableGuards_view.Chief_WorkExperienceColumn]));
+                }
+                set {
+                    this[this.tableGuards_view.Chief_WorkExperienceColumn] = value;
                 }
             }
         }
@@ -3061,22 +3122,22 @@ namespace SQL_SecurityService {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class View_1RowChangeEvent : global::System.EventArgs {
+        public class Guards_viewRowChangeEvent : global::System.EventArgs {
             
-            private View_1Row eventRow;
+            private Guards_viewRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1RowChangeEvent(View_1Row row, global::System.Data.DataRowAction action) {
+            public Guards_viewRowChangeEvent(Guards_viewRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row Row {
+            public Guards_viewRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3273,7 +3334,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM dbo.Guards";
+            this._commandCollection[0].CommandText = "SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory, Category FROM Guards";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4796,7 +4857,7 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_1TableAdapter : global::System.ComponentModel.Component {
+    public partial class Guards_viewTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4810,7 +4871,7 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public View_1TableAdapter() {
+        public Guards_viewTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4907,11 +4968,13 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_1";
-            tableMapping.ColumnMappings.Add("Пост", "Пост");
-            tableMapping.ColumnMappings.Add("Охранник", "Охранник");
-            tableMapping.ColumnMappings.Add("Время выхода", "Время выхода");
-            tableMapping.ColumnMappings.Add("Начальник", "Начальник");
+            tableMapping.DataSetTable = "Guards_view";
+            tableMapping.ColumnMappings.Add("GuardID", "GuardID");
+            tableMapping.ColumnMappings.Add("FIO", "FIO");
+            tableMapping.ColumnMappings.Add("WorkExperience", "WorkExperience");
+            tableMapping.ColumnMappings.Add("Category", "Category");
+            tableMapping.ColumnMappings.Add("Chief FIO", "Chief FIO");
+            tableMapping.ColumnMappings.Add("Chief WorkExperience", "Chief WorkExperience");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4928,7 +4991,8 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Пост, Охранник, [Время выхода], Начальник FROM dbo.View_1";
+            this._commandCollection[0].CommandText = "SELECT GuardID, FIO, WorkExperience, Category, [Chief FIO], [Chief WorkExperience" +
+                "] FROM dbo.Guards_view";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4936,7 +5000,7 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SQL_SecurityServiceDataSet.View_1DataTable dataTable) {
+        public virtual int Fill(SQL_SecurityServiceDataSet.Guards_viewDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4949,9 +5013,9 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SQL_SecurityServiceDataSet.View_1DataTable GetData() {
+        public virtual SQL_SecurityServiceDataSet.Guards_viewDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SQL_SecurityServiceDataSet.View_1DataTable dataTable = new SQL_SecurityServiceDataSet.View_1DataTable();
+            SQL_SecurityServiceDataSet.Guards_viewDataTable dataTable = new SQL_SecurityServiceDataSet.Guards_viewDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
