@@ -58,5 +58,10 @@ namespace SQL_SecurityService
             this.Close();
             Program.MainForm.Activate();
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

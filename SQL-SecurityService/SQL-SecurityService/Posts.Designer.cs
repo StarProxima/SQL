@@ -34,16 +34,16 @@
             this.удалитьТекущуюЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вернутьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
-            this.postsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.PostsTableAdapter();
             this.postIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
+            this.postsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.PostsTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -89,26 +89,13 @@
             this.nameDataGridViewTextBoxColumn,
             this.locationDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.postsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 407);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 419);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // sQL_SecurityServiceDataSet
-            // 
-            this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
-            this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // postsBindingSource
-            // 
-            this.postsBindingSource.DataMember = "Posts";
-            this.postsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
-            // 
-            // postsTableAdapter
-            // 
-            this.postsTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // postIDDataGridViewTextBoxColumn
             // 
@@ -135,6 +122,20 @@
             this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
             this.locationDataGridViewTextBoxColumn.Width = 125;
             // 
+            // postsBindingSource
+            // 
+            this.postsBindingSource.DataMember = "Posts";
+            this.postsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
+            // sQL_SecurityServiceDataSet
+            // 
+            this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
+            this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // postsTableAdapter
+            // 
+            this.postsTableAdapter.ClearBeforeFill = true;
+            // 
             // Posts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,8 +149,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
