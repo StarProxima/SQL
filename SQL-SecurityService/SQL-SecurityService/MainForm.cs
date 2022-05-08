@@ -66,5 +66,11 @@ namespace SQL_SecurityService
             OnDuty onDuty = new OnDuty();
             onDuty.Show();
         }
+
+        private void замечанияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Remarks remarks = new Remarks();
+            remarks.Show();
+        }
     }
 }

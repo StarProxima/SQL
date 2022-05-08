@@ -95,6 +95,7 @@
             this.замечанияToolStripMenuItem.Name = "замечанияToolStripMenuItem";
             this.замечанияToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.замечанияToolStripMenuItem.Text = "Замечания";
+            this.замечанияToolStripMenuItem.Click += new System.EventHandler(this.замечанияToolStripMenuItem_Click);
             // 
             // справочникиToolStripMenuItem
             // 

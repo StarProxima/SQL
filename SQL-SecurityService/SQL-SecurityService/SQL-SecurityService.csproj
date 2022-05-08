@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remarks.Designer.cs">
+      <DependentUpon>Remarks.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL_SecurityServiceDataSet.cs">
       <DependentUpon>SQL_SecurityServiceDataSet.xsd</DependentUpon>
     </Compile>
@@ -119,6 +125,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Remarks.resx">
+      <DependentUpon>Remarks.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
