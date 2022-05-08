@@ -44,6 +44,7 @@
             this.sQLSecurityServiceDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter();
+            this.постыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLSecurityServiceDataSetBindingSource)).BeginInit();
@@ -80,32 +81,33 @@
             // охранникиToolStripMenuItem
             // 
             this.охранникиToolStripMenuItem.Name = "охранникиToolStripMenuItem";
-            this.охранникиToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.охранникиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.охранникиToolStripMenuItem.Text = "Охранники";
             this.охранникиToolStripMenuItem.Click += new System.EventHandler(this.охранникиToolStripMenuItem_Click);
             // 
             // постыToolStripMenuItem
             // 
             this.постыToolStripMenuItem.Name = "постыToolStripMenuItem";
-            this.постыToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.постыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.постыToolStripMenuItem.Text = "Посты";
             // 
             // дежурстваToolStripMenuItem
             // 
             this.дежурстваToolStripMenuItem.Name = "дежурстваToolStripMenuItem";
-            this.дежурстваToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.дежурстваToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.дежурстваToolStripMenuItem.Text = "Дежурства";
             // 
             // замечанияToolStripMenuItem
             // 
             this.замечанияToolStripMenuItem.Name = "замечанияToolStripMenuItem";
-            this.замечанияToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.замечанияToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.замечанияToolStripMenuItem.Text = "Замечания";
             // 
             // справочникиToolStripMenuItem
             // 
             this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.начальникиToolStripMenuItem});
+            this.начальникиToolStripMenuItem,
+            this.постыToolStripMenuItem1});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
             this.справочникиToolStripMenuItem.Text = "Справочники";
@@ -113,7 +115,7 @@
             // начальникиToolStripMenuItem
             // 
             this.начальникиToolStripMenuItem.Name = "начальникиToolStripMenuItem";
-            this.начальникиToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.начальникиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.начальникиToolStripMenuItem.Text = "Начальники";
             this.начальникиToolStripMenuItem.Click += new System.EventHandler(this.начальникиToolStripMenuItem_Click);
             // 
@@ -155,6 +157,13 @@
             // 
             this.guardsTableAdapter.ClearBeforeFill = true;
             // 
+            // постыToolStripMenuItem1
+            // 
+            this.постыToolStripMenuItem1.Name = "постыToolStripMenuItem1";
+            this.постыToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.постыToolStripMenuItem1.Text = "Посты";
+            this.постыToolStripMenuItem1.Click += new System.EventHandler(this.постыToolStripMenuItem1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -192,6 +201,7 @@
         private System.Windows.Forms.ToolStripMenuItem дежурстваToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem замечанияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem начальникиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem постыToolStripMenuItem1;
     }
 }
 

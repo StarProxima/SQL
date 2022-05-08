@@ -53,5 +53,11 @@ namespace SQL_SecurityService
             About about = new About();
             about.Show();
         }
+
+        private void постыToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Posts posts = new Posts();
+            posts.Show();
+        }
     }
 }
