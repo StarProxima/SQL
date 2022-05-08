@@ -52,5 +52,13 @@ namespace SQL_SecurityService
             addGuards.ShowDialog();
             guards_viewTableAdapter.Fill(sQL_SecurityServiceDataSet.Guards_view);
         }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string sqlExpression = "DELETE FROM Guards WHERE GuardID = " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            SqlCommand command = new SqlCommand(sqlExpression, Program.MainForm.connect);
+            command.ExecuteNonQuery();
+            guards_viewTableAdapter.Fill(sQL_SecurityServiceDataSet.Guards_view);
+        }
     }
 }
