@@ -45,10 +45,14 @@
             this.guardsviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
             this.guards_viewTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.Guards_viewTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.сhiefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.сhiefsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardsviewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -76,21 +80,21 @@
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.изменитьToolStripMenuItem.Text = "Изменить";
             this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
@@ -182,11 +186,33 @@
             // 
             this.guards_viewTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.сhiefsBindingSource;
+            this.comboBox1.DisplayMember = "FIO";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(174, 4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.ValueMember = "СhiefID";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // сhiefsBindingSource
+            // 
+            this.сhiefsBindingSource.DataMember = "Сhiefs";
+            this.сhiefsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
+            // сhiefsTableAdapter
+            // 
+            this.сhiefsTableAdapter.ClearBeforeFill = true;
+            // 
             // Guards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -198,6 +224,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardsviewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +248,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn chiefFIODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn chiefWorkExperienceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource сhiefsBindingSource;
+        private SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter сhiefsTableAdapter;
     }
 }
