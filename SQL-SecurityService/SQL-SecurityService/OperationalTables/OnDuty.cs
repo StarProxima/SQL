@@ -28,6 +28,7 @@ namespace SQL_SecurityService
         {
             AddOnDuty addOnDuty = new AddOnDuty(null, null, null, null, null);
             addOnDuty.ShowDialog();
+            onDuty_ViewTableAdapter.Fill(sQL_SecurityServiceDataSet.OnDuty_View);
         }
     }
 }
