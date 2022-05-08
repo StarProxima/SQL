@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddGuards.cs">
+    <Compile Include="OperationalTables\AddForms\AddGuards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddGuards.Designer.cs">
+    <Compile Include="OperationalTables\AddForms\AddGuards.Designer.cs">
       <DependentUpon>AddGuards.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu\About.cs">
@@ -104,7 +104,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SQL_SecurityServiceDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddGuards.resx">
+    <EmbeddedResource Include="OperationalTables\AddForms\AddGuards.resx">
       <DependentUpon>AddGuards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\About.resx">
@@ -161,8 +161,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OperationalTables\AddForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

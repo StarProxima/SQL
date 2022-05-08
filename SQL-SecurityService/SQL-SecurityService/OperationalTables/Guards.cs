@@ -24,21 +24,33 @@ namespace SQL_SecurityService
             this.guards_viewTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Guards_view);
 
         }
-        SqlDataAdapter dataAdapter = null;
-        private void UpdateView()
-        {
-            dataAdapter = new SqlDataAdapter("SELECT * FROM Guards_View", Program.MainForm.connect);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
-        }
+
+        //SqlDataAdapter dataAdapter = null;
+        //private void UpdateView()
+        //{
+        //    dataAdapter = new SqlDataAdapter("SELECT * FROM Guards_View", Program.MainForm.connect);
+        //    DataTable dataTable = new DataTable();
+        //    dataAdapter.Fill(dataTable);
+        //    dataGridView1.DataSource = dataTable;
+        //}
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddGuards addGuards = new AddGuards(null, null, null, null);
-            DialogResult d = addGuards.ShowDialog();
+            AddGuards addGuards = new AddGuards(null, null, null, null, null);
+            addGuards.ShowDialog();
             guards_viewTableAdapter.Fill(sQL_SecurityServiceDataSet.Guards_view);
             
+        }
+
+        private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddGuards addGuards = new AddGuards(dataGridView1.CurrentRow.Cells[0].Value.ToString(),
+                dataGridView1.CurrentRow.Cells[1].Value.ToString(),
+                dataGridView1.CurrentRow.Cells[2].Value.ToString(),
+                dataGridView1.CurrentRow.Cells[3].Value.ToString(),
+                dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            addGuards.ShowDialog();
+            guards_viewTableAdapter.Fill(sQL_SecurityServiceDataSet.Guards_view);
         }
     }
 }

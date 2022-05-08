@@ -13,17 +13,19 @@ namespace SQL_SecurityService
 {
     public partial class AddGuards : Form
     {
-        string FIO;
-        string WorkExperience;
-        string Category;
-        string ChiefID;
-        public AddGuards(string FIO, string WorkExperience, string Category, string ChiefID)
+        string GuardID;
+        //string FIO;
+        //string WorkExperience;
+        //string Category;
+        //string ChiefID;
+        public AddGuards(string GuardID, string FIO, string WorkExperience, string Category, string ChiefID)
         {
             InitializeComponent();
-            this.FIO = FIO;
-            this.WorkExperience = WorkExperience;
-            this.Category = Category;
-            this.ChiefID = ChiefID;
+            this.GuardID = GuardID;
+            //this.FIO = FIO;
+            //this.WorkExperience = WorkExperience;
+            //this.Category = Category;
+            //this.ChiefID = ChiefID;
              
             try
             {
@@ -64,16 +66,32 @@ namespace SQL_SecurityService
                 return;
             }
             int n;
-            if(!Int32.TryParse(textBox1.Text, out n) && !Int32.TryParse(textBox2.Text, out n) && !Int32.TryParse(textBox3.Text, out n))
+            if(!Int32.TryParse(textBox2.Text, out n) || !Int32.TryParse(textBox3.Text, out n))
             {
                 MessageBox.Show("Введены некорректыне данные.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             SqlCommand command;
-            if (FIO != null && WorkExperience != null && Category != null)
+            //if (FIO != null && WorkExperience != null && Category != null)
+            if(GuardID != null)
             {
-                
+                string sqlExpression = "UPDATE Guards SET FIO = @f, WorkExperience = @ff, Category = @fff, СhiefID = @ffff WHERE GuardID = @id";
+
+                SqlParameter Param;
+                command = new SqlCommand(sqlExpression, Program.MainForm.connect);
+
+                Param = new SqlParameter("@f", textBox1.Text);
+                command.Parameters.Add(Param);
+                Param = new SqlParameter("@ff", textBox2.Text);
+                command.Parameters.Add(Param);
+                Param = new SqlParameter("@fff", textBox3.Text);
+                command.Parameters.Add(Param);
+                Param = new SqlParameter("@ffff", Int32.Parse(comboBox1.SelectedValue.ToString()));
+                command.Parameters.Add(Param);
+                Param = new SqlParameter("@id", GuardID.ToString());
+                command.Parameters.Add(Param);
+                command.ExecuteNonQuery();
             }
             else
             {
