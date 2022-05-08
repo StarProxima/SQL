@@ -33,16 +33,17 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.сhiefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
-            this.сhiefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.сhiefsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -79,6 +80,16 @@
             this.comboBox1.TabIndex = 3;
             this.comboBox1.ValueMember = "СhiefID";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // сhiefsBindingSource
+            // 
+            this.сhiefsBindingSource.DataMember = "Сhiefs";
+            this.сhiefsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
+            // sQL_SecurityServiceDataSet
+            // 
+            this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
+            this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -119,7 +130,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(220, 304);
+            this.button1.Location = new System.Drawing.Point(245, 287);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 50);
             this.button1.TabIndex = 8;
@@ -127,25 +138,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // sQL_SecurityServiceDataSet
-            // 
-            this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
-            this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // сhiefsBindingSource
-            // 
-            this.сhiefsBindingSource.DataMember = "Сhiefs";
-            this.сhiefsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
-            // 
             // сhiefsTableAdapter
             // 
             this.сhiefsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(490, 287);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 50);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Отмена";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AddGuards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -158,8 +170,8 @@
             this.Name = "AddGuards";
             this.Text = "AddGuards";
             this.Load += new System.EventHandler(this.AddGuards_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +191,6 @@
         private SQL_SecurityServiceDataSet sQL_SecurityServiceDataSet;
         private System.Windows.Forms.BindingSource сhiefsBindingSource;
         private SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter сhiefsTableAdapter;
+        private System.Windows.Forms.Button button2;
     }
 }

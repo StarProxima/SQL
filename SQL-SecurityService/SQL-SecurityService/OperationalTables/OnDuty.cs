@@ -23,5 +23,11 @@ namespace SQL_SecurityService
             this.onDuty_ViewTableAdapter.Fill(this.sQL_SecurityServiceDataSet.OnDuty_View);
 
         }
+
+        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddOnDuty addOnDuty = new AddOnDuty(null, null, null, null, null);
+            addOnDuty.ShowDialog();
+        }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OperationalTables\AddForms\AddOnDuty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationalTables\AddForms\AddOnDuty.Designer.cs">
+      <DependentUpon>AddOnDuty.cs</DependentUpon>
+    </Compile>
     <Compile Include="OperationalTables\AddForms\AddGuards.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationalTables\AddForms\AddOnDuty.resx">
+      <DependentUpon>AddOnDuty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReferenceTables\Chiefs.resx">
       <DependentUpon>Chiefs.cs</DependentUpon>
