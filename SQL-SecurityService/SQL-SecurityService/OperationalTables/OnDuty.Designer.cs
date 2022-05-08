@@ -44,13 +44,17 @@
             this.chiefWorkExperienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onDutyViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.onDutyViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
+            this.onDutyViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.onDutyViewBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.onDuty_ViewTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.OnDuty_ViewTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -78,7 +82,7 @@
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
@@ -87,17 +91,19 @@
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
             this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.изменитьToolStripMenuItem.Text = "Изменить";
+            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
             this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(67, 26);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // dataGridView1
@@ -113,7 +119,7 @@
             this.chiefWorkExperienceDataGridViewTextBoxColumn,
             this.postNameDataGridViewTextBoxColumn,
             this.postLocationDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.onDutyViewBindingSource;
+            this.dataGridView1.DataSource = this.onDutyViewBindingSource2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
@@ -186,15 +192,25 @@
             this.postLocationDataGridViewTextBoxColumn.Name = "postLocationDataGridViewTextBoxColumn";
             this.postLocationDataGridViewTextBoxColumn.Width = 125;
             // 
-            // onDutyViewBindingSource
+            // onDutyViewBindingSource1
             // 
-            this.onDutyViewBindingSource.DataMember = "OnDuty_View";
-            this.onDutyViewBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            this.onDutyViewBindingSource1.DataMember = "OnDuty_View";
+            this.onDutyViewBindingSource1.DataSource = this.sQL_SecurityServiceDataSet;
             // 
             // sQL_SecurityServiceDataSet
             // 
             this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
             this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // onDutyViewBindingSource
+            // 
+            this.onDutyViewBindingSource.DataMember = "OnDuty_View";
+            this.onDutyViewBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
+            // onDutyViewBindingSource2
+            // 
+            this.onDutyViewBindingSource2.DataMember = "OnDuty_View";
+            this.onDutyViewBindingSource2.DataSource = this.sQL_SecurityServiceDataSet;
             // 
             // onDuty_ViewTableAdapter
             // 
@@ -213,8 +229,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +249,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private SQL_SecurityServiceDataSet sQL_SecurityServiceDataSet;
         private System.Windows.Forms.BindingSource onDutyViewBindingSource;
-        private SQL_SecurityServiceDataSetTableAdapters.OnDuty_ViewTableAdapter onDuty_ViewTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn onDutyIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn exitTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn guardFIODataGridViewTextBoxColumn;
@@ -240,5 +257,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn chiefWorkExperienceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postLocationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource onDutyViewBindingSource1;
+        private System.Windows.Forms.BindingSource onDutyViewBindingSource2;
+        private SQL_SecurityServiceDataSetTableAdapters.OnDuty_ViewTableAdapter onDuty_ViewTableAdapter;
     }
 }

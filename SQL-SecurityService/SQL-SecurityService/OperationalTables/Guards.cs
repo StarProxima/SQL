@@ -20,6 +20,8 @@ namespace SQL_SecurityService
 
         private void Guards_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Guards_view". При необходимости она может быть перемещена или удалена.
+            this.guards_viewTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Guards_view);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Сhiefs". При необходимости она может быть перемещена или удалена.
             this.сhiefsTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Сhiefs);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Guards_view". При необходимости она может быть перемещена или удалена.
@@ -46,11 +48,15 @@ namespace SQL_SecurityService
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string sqlExpression = "SELECT СhiefID FROM Guards WHERE GuardID = " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            SqlCommand command = new SqlCommand(sqlExpression, Program.MainForm.connect);
+            
+
             AddGuards addGuards = new AddGuards(dataGridView1.CurrentRow.Cells[0].Value.ToString(),
                 dataGridView1.CurrentRow.Cells[1].Value.ToString(),
                 dataGridView1.CurrentRow.Cells[2].Value.ToString(),
                 dataGridView1.CurrentRow.Cells[3].Value.ToString(),
-                dataGridView1.CurrentRow.Cells[4].Value.ToString());
+                command.ExecuteScalar().ToString());
             addGuards.ShowDialog();
             guards_viewTableAdapter.Fill(sQL_SecurityServiceDataSet.Guards_view);
         }

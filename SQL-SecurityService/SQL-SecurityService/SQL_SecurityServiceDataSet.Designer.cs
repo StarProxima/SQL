@@ -2492,6 +2492,8 @@ namespace SQL_SecurityService {
             
             private global::System.Data.DataColumn columnGuard_WorkExperience;
             
+            private global::System.Data.DataColumn columnGuard_Category;
+            
             private global::System.Data.DataColumn columnChief_FIO;
             
             private global::System.Data.DataColumn columnChief_WorkExperience;
@@ -2567,6 +2569,14 @@ namespace SQL_SecurityService {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Guard_CategoryColumn {
+                get {
+                    return this.columnGuard_Category;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Chief_FIOColumn {
                 get {
                     return this.columnChief_FIO;
@@ -2634,13 +2644,14 @@ namespace SQL_SecurityService {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OnDuty_ViewRow AddOnDuty_ViewRow(int OnDutyID, System.DateTime ExitTime, string Guard_FIO, int Guard_WorkExperience, string Chief_FIO, int Chief_WorkExperience, string Post_Name, string Post_Location) {
+            public OnDuty_ViewRow AddOnDuty_ViewRow(int OnDutyID, System.DateTime ExitTime, string Guard_FIO, int Guard_WorkExperience, int Guard_Category, string Chief_FIO, int Chief_WorkExperience, string Post_Name, string Post_Location) {
                 OnDuty_ViewRow rowOnDuty_ViewRow = ((OnDuty_ViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OnDutyID,
                         ExitTime,
                         Guard_FIO,
                         Guard_WorkExperience,
+                        Guard_Category,
                         Chief_FIO,
                         Chief_WorkExperience,
                         Post_Name,
@@ -2678,6 +2689,7 @@ namespace SQL_SecurityService {
                 this.columnExitTime = base.Columns["ExitTime"];
                 this.columnGuard_FIO = base.Columns["Guard FIO"];
                 this.columnGuard_WorkExperience = base.Columns["Guard WorkExperience"];
+                this.columnGuard_Category = base.Columns["Guard Category"];
                 this.columnChief_FIO = base.Columns["Chief FIO"];
                 this.columnChief_WorkExperience = base.Columns["Chief WorkExperience"];
                 this.columnPost_Name = base.Columns["Post Name"];
@@ -2695,6 +2707,8 @@ namespace SQL_SecurityService {
                 base.Columns.Add(this.columnGuard_FIO);
                 this.columnGuard_WorkExperience = new global::System.Data.DataColumn("Guard WorkExperience", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGuard_WorkExperience);
+                this.columnGuard_Category = new global::System.Data.DataColumn("Guard Category", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGuard_Category);
                 this.columnChief_FIO = new global::System.Data.DataColumn("Chief FIO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnChief_FIO);
                 this.columnChief_WorkExperience = new global::System.Data.DataColumn("Chief WorkExperience", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2711,6 +2725,7 @@ namespace SQL_SecurityService {
                 this.columnGuard_FIO.AllowDBNull = false;
                 this.columnGuard_FIO.MaxLength = 100;
                 this.columnGuard_WorkExperience.AllowDBNull = false;
+                this.columnGuard_Category.AllowDBNull = false;
                 this.columnChief_FIO.AllowDBNull = false;
                 this.columnChief_FIO.MaxLength = 100;
                 this.columnChief_WorkExperience.AllowDBNull = false;
@@ -3823,6 +3838,17 @@ namespace SQL_SecurityService {
                 }
                 set {
                     this[this.tableOnDuty_View.Guard_WorkExperienceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Guard_Category {
+                get {
+                    return ((int)(this[this.tableOnDuty_View.Guard_CategoryColumn]));
+                }
+                set {
+                    this[this.tableOnDuty_View.Guard_CategoryColumn] = value;
                 }
             }
             
@@ -6251,6 +6277,7 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
             tableMapping.ColumnMappings.Add("ExitTime", "ExitTime");
             tableMapping.ColumnMappings.Add("Guard FIO", "Guard FIO");
             tableMapping.ColumnMappings.Add("Guard WorkExperience", "Guard WorkExperience");
+            tableMapping.ColumnMappings.Add("Guard Category", "Guard Category");
             tableMapping.ColumnMappings.Add("Chief FIO", "Chief FIO");
             tableMapping.ColumnMappings.Add("Chief WorkExperience", "Chief WorkExperience");
             tableMapping.ColumnMappings.Add("Post Name", "Post Name");
@@ -6271,8 +6298,9 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT OnDutyID, ExitTime, [Guard FIO], [Guard WorkExperience], [Chief FIO], [Chi" +
-                "ef WorkExperience], [Post Name], [Post Location] FROM dbo.OnDuty_View";
+            this._commandCollection[0].CommandText = "SELECT OnDutyID, ExitTime, [Guard FIO], [Guard WorkExperience], [Guard Category]," +
+                " [Chief FIO], [Chief WorkExperience], [Post Name], [Post Location] FROM dbo.OnDu" +
+                "ty_View";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

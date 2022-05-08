@@ -21,6 +21,8 @@ namespace SQL_SecurityService
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Remarks_View". При необходимости она может быть перемещена или удалена.
             this.remarks_ViewTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Remarks_View);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Remarks_View". При необходимости она может быть перемещена или удалена.
+            this.remarks_ViewTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Remarks_View);
 
         }
     }

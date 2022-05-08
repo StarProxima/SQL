@@ -323,7 +323,7 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
               <DbSource ConnectionRef="SQL_SecurityServiceConnectionString (Settings)" DbObjectName="SQL_SecurityService.dbo.OnDuty_View" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT OnDutyID, ExitTime, [Guard FIO], [Guard WorkExperience], [Chief FIO], [Chief WorkExperience], [Post Name], [Post Location] FROM dbo.OnDuty_View</CommandText>
+                    <CommandText>SELECT OnDutyID, ExitTime, [Guard FIO], [Guard WorkExperience], [Guard Category], [Chief FIO], [Chief WorkExperience], [Post Name], [Post Location] FROM dbo.OnDuty_View</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -334,6 +334,7 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
               <Mapping SourceColumn="ExitTime" DataSetColumn="ExitTime" />
               <Mapping SourceColumn="Guard FIO" DataSetColumn="Guard FIO" />
               <Mapping SourceColumn="Guard WorkExperience" DataSetColumn="Guard WorkExperience" />
+              <Mapping SourceColumn="Guard Category" DataSetColumn="Guard Category" />
               <Mapping SourceColumn="Chief FIO" DataSetColumn="Chief FIO" />
               <Mapping SourceColumn="Chief WorkExperience" DataSetColumn="Chief WorkExperience" />
               <Mapping SourceColumn="Post Name" DataSetColumn="Post Name" />
@@ -386,7 +387,7 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
                 </xs:simpleType>
               </xs:element>
               <xs:element name="WorkExperience" msprop:Generator_ColumnPropNameInTable="WorkExperienceColumn" msprop:Generator_ColumnPropNameInRow="WorkExperience" msprop:Generator_UserColumnName="WorkExperience" msprop:Generator_ColumnVarNameInTable="columnWorkExperience" type="xs:int" />
-              <xs:element name="Category" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_UserColumnName="Category" type="xs:int" />
+              <xs:element name="Category" msprop:Generator_UserColumnName="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -454,27 +455,27 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Guards_view" msprop:Generator_RowClassName="Guards_viewRow" msprop:Generator_RowEvHandlerName="Guards_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="Guards_viewRowDeleted" msprop:Generator_RowDeletingName="Guards_viewRowDeleting" msprop:Generator_RowEvArgName="Guards_viewRowChangeEvent" msprop:Generator_TablePropName="Guards_view" msprop:Generator_RowChangedName="Guards_viewRowChanged" msprop:Generator_UserTableName="Guards_view" msprop:Generator_RowChangingName="Guards_viewRowChanging" msprop:Generator_TableClassName="Guards_viewDataTable" msprop:Generator_TableVarName="tableGuards_view">
+        <xs:element name="Guards_view" msprop:Generator_RowEvHandlerName="Guards_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="Guards_viewRowDeleted" msprop:Generator_RowDeletingName="Guards_viewRowDeleting" msprop:Generator_RowEvArgName="Guards_viewRowChangeEvent" msprop:Generator_TablePropName="Guards_view" msprop:Generator_RowChangedName="Guards_viewRowChanged" msprop:Generator_RowChangingName="Guards_viewRowChanging" msprop:Generator_TableClassName="Guards_viewDataTable" msprop:Generator_RowClassName="Guards_viewRow" msprop:Generator_TableVarName="tableGuards_view" msprop:Generator_UserTableName="Guards_view">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="GuardID" msprop:Generator_UserColumnName="GuardID" msprop:Generator_ColumnPropNameInTable="GuardIDColumn" msprop:Generator_ColumnPropNameInRow="GuardID" msprop:Generator_ColumnVarNameInTable="columnGuardID" type="xs:int" />
-              <xs:element name="FIO" msprop:Generator_UserColumnName="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnVarNameInTable="columnFIO">
+              <xs:element name="GuardID" msprop:Generator_ColumnPropNameInRow="GuardID" msprop:Generator_ColumnPropNameInTable="GuardIDColumn" msprop:Generator_ColumnVarNameInTable="columnGuardID" msprop:Generator_UserColumnName="GuardID" type="xs:int" />
+              <xs:element name="FIO" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_ColumnVarNameInTable="columnFIO" msprop:Generator_UserColumnName="FIO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="WorkExperience" msprop:Generator_UserColumnName="WorkExperience" msprop:Generator_ColumnPropNameInTable="WorkExperienceColumn" msprop:Generator_ColumnPropNameInRow="WorkExperience" msprop:Generator_ColumnVarNameInTable="columnWorkExperience" type="xs:int" />
-              <xs:element name="Category" msprop:Generator_UserColumnName="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" type="xs:int" />
-              <xs:element name="Chief_x0020_FIO" msprop:Generator_UserColumnName="Chief FIO" msprop:Generator_ColumnPropNameInTable="Chief_FIOColumn" msprop:Generator_ColumnPropNameInRow="Chief_FIO" msprop:Generator_ColumnVarNameInTable="columnChief_FIO">
+              <xs:element name="WorkExperience" msprop:Generator_ColumnPropNameInRow="WorkExperience" msprop:Generator_ColumnPropNameInTable="WorkExperienceColumn" msprop:Generator_ColumnVarNameInTable="columnWorkExperience" msprop:Generator_UserColumnName="WorkExperience" type="xs:int" />
+              <xs:element name="Category" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_UserColumnName="Category" type="xs:int" />
+              <xs:element name="Chief_x0020_FIO" msprop:Generator_ColumnPropNameInRow="Chief_FIO" msprop:Generator_ColumnPropNameInTable="Chief_FIOColumn" msprop:Generator_ColumnVarNameInTable="columnChief_FIO" msprop:Generator_UserColumnName="Chief FIO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Chief_x0020_WorkExperience" msprop:Generator_UserColumnName="Chief WorkExperience" msprop:Generator_ColumnPropNameInTable="Chief_WorkExperienceColumn" msprop:Generator_ColumnPropNameInRow="Chief_WorkExperience" msprop:Generator_ColumnVarNameInTable="columnChief_WorkExperience" type="xs:int" />
+              <xs:element name="Chief_x0020_WorkExperience" msprop:Generator_ColumnPropNameInRow="Chief_WorkExperience" msprop:Generator_ColumnPropNameInTable="Chief_WorkExperienceColumn" msprop:Generator_ColumnVarNameInTable="columnChief_WorkExperience" msprop:Generator_UserColumnName="Chief WorkExperience" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -491,6 +492,7 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Guard_x0020_WorkExperience" msprop:Generator_ColumnPropNameInRow="Guard_WorkExperience" msprop:Generator_ColumnPropNameInTable="Guard_WorkExperienceColumn" msprop:Generator_ColumnVarNameInTable="columnGuard_WorkExperience" msprop:Generator_UserColumnName="Guard WorkExperience" type="xs:int" />
+              <xs:element name="Guard_x0020_Category" msprop:Generator_ColumnPropNameInRow="Guard_Category" msprop:Generator_ColumnPropNameInTable="Guard_CategoryColumn" msprop:Generator_ColumnVarNameInTable="columnGuard_Category" msprop:Generator_UserColumnName="Guard Category" type="xs:int" />
               <xs:element name="Chief_x0020_FIO" msprop:Generator_ColumnPropNameInRow="Chief_FIO" msprop:Generator_ColumnPropNameInTable="Chief_FIOColumn" msprop:Generator_ColumnVarNameInTable="columnChief_FIO" msprop:Generator_UserColumnName="Chief FIO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -598,13 +600,13 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)</
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Guards__СhiefID__32E0915F" msdata:parent="Сhiefs" msdata:child="Guards" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="Guards" msprop:Generator_RelationVarName="relationFK__Guards__СhiefID__32E0915F" msprop:Generator_ChildPropName="GetGuardsRows" msprop:Generator_ParentPropName="СhiefsRow" msprop:Generator_UserRelationName="FK__Guards__СhiefID__32E0915F" />
-      <msdata:Relationship name="FK__OnDuty__GuardID__300424B4" msdata:parent="Guards" msdata:child="OnDuty" msdata:parentkey="GuardID" msdata:childkey="GuardID" msprop:Generator_UserParentTable="Guards" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__GuardID__300424B4" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_UserRelationName="FK__OnDuty__GuardID__300424B4" msprop:Generator_ParentPropName="GuardsRow" />
-      <msdata:Relationship name="FK__OnDuty__PostID__30F848ED" msdata:parent="Posts" msdata:child="OnDuty" msdata:parentkey="PostID" msdata:childkey="PostID" msprop:Generator_UserParentTable="Posts" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__PostID__30F848ED" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_ParentPropName="PostsRow" msprop:Generator_UserRelationName="FK__OnDuty__PostID__30F848ED" />
-      <msdata:Relationship name="FK__OnDuty__СhiefID__31EC6D26" msdata:parent="Сhiefs" msdata:child="OnDuty" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__СhiefID__31EC6D26" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_ParentPropName="СhiefsRow" msprop:Generator_UserRelationName="FK__OnDuty__СhiefID__31EC6D26" />
-      <msdata:Relationship name="FK__Remarks__GuardID__2D27B809" msdata:parent="Guards" msdata:child="Remarks" msdata:parentkey="GuardID" msdata:childkey="GuardID" msprop:Generator_UserParentTable="Guards" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__GuardID__2D27B809" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_UserRelationName="FK__Remarks__GuardID__2D27B809" msprop:Generator_ParentPropName="GuardsRow" />
-      <msdata:Relationship name="FK__Remarks__PostID__2E1BDC42" msdata:parent="Posts" msdata:child="Remarks" msdata:parentkey="PostID" msdata:childkey="PostID" msprop:Generator_UserParentTable="Posts" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__PostID__2E1BDC42" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_UserRelationName="FK__Remarks__PostID__2E1BDC42" msprop:Generator_ParentPropName="PostsRow" />
-      <msdata:Relationship name="FK__Remarks__СhiefID__2F10007B" msdata:parent="Сhiefs" msdata:child="Remarks" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__СhiefID__2F10007B" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_ParentPropName="СhiefsRow" msprop:Generator_UserRelationName="FK__Remarks__СhiefID__2F10007B" />
+      <msdata:Relationship name="FK__Guards__СhiefID__32E0915F" msdata:parent="Сhiefs" msdata:child="Guards" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="Guards" msprop:Generator_RelationVarName="relationFK__Guards__СhiefID__32E0915F" msprop:Generator_ChildPropName="GetGuardsRows" msprop:Generator_UserRelationName="FK__Guards__СhiefID__32E0915F" msprop:Generator_ParentPropName="СhiefsRow" />
+      <msdata:Relationship name="FK__OnDuty__GuardID__300424B4" msdata:parent="Guards" msdata:child="OnDuty" msdata:parentkey="GuardID" msdata:childkey="GuardID" msprop:Generator_UserParentTable="Guards" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__GuardID__300424B4" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_ParentPropName="GuardsRow" msprop:Generator_UserRelationName="FK__OnDuty__GuardID__300424B4" />
+      <msdata:Relationship name="FK__OnDuty__PostID__30F848ED" msdata:parent="Posts" msdata:child="OnDuty" msdata:parentkey="PostID" msdata:childkey="PostID" msprop:Generator_UserParentTable="Posts" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__PostID__30F848ED" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_UserRelationName="FK__OnDuty__PostID__30F848ED" msprop:Generator_ParentPropName="PostsRow" />
+      <msdata:Relationship name="FK__OnDuty__СhiefID__31EC6D26" msdata:parent="Сhiefs" msdata:child="OnDuty" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="OnDuty" msprop:Generator_RelationVarName="relationFK__OnDuty__СhiefID__31EC6D26" msprop:Generator_ChildPropName="GetOnDutyRows" msprop:Generator_UserRelationName="FK__OnDuty__СhiefID__31EC6D26" msprop:Generator_ParentPropName="СhiefsRow" />
+      <msdata:Relationship name="FK__Remarks__GuardID__2D27B809" msdata:parent="Guards" msdata:child="Remarks" msdata:parentkey="GuardID" msdata:childkey="GuardID" msprop:Generator_UserParentTable="Guards" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__GuardID__2D27B809" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_ParentPropName="GuardsRow" msprop:Generator_UserRelationName="FK__Remarks__GuardID__2D27B809" />
+      <msdata:Relationship name="FK__Remarks__PostID__2E1BDC42" msdata:parent="Posts" msdata:child="Remarks" msdata:parentkey="PostID" msdata:childkey="PostID" msprop:Generator_UserParentTable="Posts" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__PostID__2E1BDC42" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_ParentPropName="PostsRow" msprop:Generator_UserRelationName="FK__Remarks__PostID__2E1BDC42" />
+      <msdata:Relationship name="FK__Remarks__СhiefID__2F10007B" msdata:parent="Сhiefs" msdata:child="Remarks" msdata:parentkey="СhiefID" msdata:childkey="СhiefID" msprop:Generator_UserParentTable="Сhiefs" msprop:Generator_UserChildTable="Remarks" msprop:Generator_RelationVarName="relationFK__Remarks__СhiefID__2F10007B" msprop:Generator_ChildPropName="GetRemarksRows" msprop:Generator_UserRelationName="FK__Remarks__СhiefID__2F10007B" msprop:Generator_ParentPropName="СhiefsRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

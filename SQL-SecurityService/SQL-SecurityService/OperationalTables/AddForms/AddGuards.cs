@@ -14,33 +14,30 @@ namespace SQL_SecurityService
     public partial class AddGuards : Form
     {
         string GuardID;
-        //string FIO;
-        //string WorkExperience;
-        //string Category;
-        //string ChiefID;
+        string FIO;
+        string WorkExperience;
+        string Category;
+        string ChiefID;
         public AddGuards(string GuardID, string FIO, string WorkExperience, string Category, string ChiefID)
         {
             InitializeComponent();
             this.GuardID = GuardID;
-            //this.FIO = FIO;
-            //this.WorkExperience = WorkExperience;
-            //this.Category = Category;
-            //this.ChiefID = ChiefID;
+            this.FIO = FIO;
+            this.WorkExperience = WorkExperience;
+            this.Category = Category;
+            this.ChiefID = ChiefID;
              
-            try
-            {
-                if(FIO != null && WorkExperience != null && Category != null)
-                {
-                    textBox1.Text = FIO;
-                    textBox2.Text = WorkExperience;
-                    textBox3.Text = Category;
-                    comboBox1.SelectedValue = ChiefID;
-                }
-            }
-            catch (System.Data.Common.DbException)
-            {
-                MessageBox.Show("Ошибка доступа к БД");
-            }
+            
+            //if(FIO != null && WorkExperience != null && Category != null)
+            //{
+            //    textBox1.Text = FIO;
+            //    textBox2.Text = WorkExperience;
+            //    textBox3.Text = Category;
+            //    //comboBox1.SelectedValue = 1;
+                
+            //    //Console.WriteLine("SelectedValue " + comboBox1.Text);
+            //}
+           
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -120,6 +117,24 @@ namespace SQL_SecurityService
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Сhiefs". При необходимости она может быть перемещена или удалена.
             this.сhiefsTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Сhiefs);
 
+            try
+            {
+                if (FIO != null && WorkExperience != null && Category != null )
+            {
+                textBox1.Text = FIO;
+                textBox2.Text = WorkExperience;
+                textBox3.Text = Category;
+                comboBox1.SelectedValue = ChiefID;
+            }
+            }
+            catch (System.Data.Common.DbException)
+            {
+                MessageBox.Show("Ошибка доступа к БД");
+            }
+
+            
+
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

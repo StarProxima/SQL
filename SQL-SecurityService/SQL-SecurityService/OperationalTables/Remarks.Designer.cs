@@ -36,8 +36,9 @@
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
             this.remarksViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
+            this.remarksViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.remarks_ViewTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.Remarks_ViewTableAdapter();
             this.remarkIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,8 +51,9 @@
             this.postLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarksViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.remarksViewBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -114,7 +116,7 @@
             this.chiefWorkExperienceDataGridViewTextBoxColumn,
             this.postNameDataGridViewTextBoxColumn,
             this.postLocationDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.remarksViewBindingSource;
+            this.dataGridView1.DataSource = this.remarksViewBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
@@ -123,15 +125,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 422);
             this.dataGridView1.TabIndex = 3;
             // 
+            // remarksViewBindingSource
+            // 
+            this.remarksViewBindingSource.DataMember = "Remarks_View";
+            this.remarksViewBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
             // sQL_SecurityServiceDataSet
             // 
             this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
             this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // remarksViewBindingSource
+            // remarksViewBindingSource1
             // 
-            this.remarksViewBindingSource.DataMember = "Remarks_View";
-            this.remarksViewBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            this.remarksViewBindingSource1.DataMember = "Remarks_View";
+            this.remarksViewBindingSource1.DataSource = this.sQL_SecurityServiceDataSet;
             // 
             // remarks_ViewTableAdapter
             // 
@@ -222,8 +229,9 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarksViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.remarksViewBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,6 +248,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private SQL_SecurityServiceDataSet sQL_SecurityServiceDataSet;
         private System.Windows.Forms.BindingSource remarksViewBindingSource;
+        private System.Windows.Forms.BindingSource remarksViewBindingSource1;
         private SQL_SecurityServiceDataSetTableAdapters.Remarks_ViewTableAdapter remarks_ViewTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn remarkIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn remarkDataGridViewTextBoxColumn;

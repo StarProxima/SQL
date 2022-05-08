@@ -42,8 +42,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.сhiefsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
+            this.сhiefsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -152,6 +154,11 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // сhiefsBindingSource1
+            // 
+            this.сhiefsBindingSource1.DataMember = "Сhiefs";
+            this.сhiefsBindingSource1.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
             // AddGuards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,6 +179,7 @@
             this.Load += new System.EventHandler(this.AddGuards_Load);
             ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +200,6 @@
         private System.Windows.Forms.BindingSource сhiefsBindingSource;
         private SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter сhiefsTableAdapter;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource сhiefsBindingSource1;
     }
 }

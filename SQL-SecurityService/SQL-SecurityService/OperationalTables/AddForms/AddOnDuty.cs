@@ -14,25 +14,18 @@ namespace SQL_SecurityService
     public partial class AddOnDuty : Form
     {
         string OnDutyID;
-        public AddOnDuty(string OnDutyID, string GuardID, string ChiefID, string PostId, string ExitTime)
+        string GuardID;
+        string ChiefID; 
+        string PostId; 
+        string ExitTime;
+        public AddOnDuty(string OnDutyID, string ExitTime, string GuardID, string ChiefID, string PostId)
         {
             InitializeComponent();
             this.OnDutyID = OnDutyID;
-
-            try
-            {
-                if (GuardID != null && ChiefID != null && PostId != null && ExitTime != null)
-                {
-                    textBox1.Text = ExitTime;
-                    comboBox1.SelectedValue = GuardID;
-                    comboBox2.SelectedValue = ChiefID;
-                    comboBox3.SelectedValue = PostId;
-                }
-            }
-            catch (System.Data.Common.DbException)
-            {
-                MessageBox.Show("Ошибка доступа к БД");
-            }
+            this.GuardID = GuardID;
+            this.ChiefID = ChiefID;
+            this.PostId = PostId;
+            this.ExitTime = ExitTime;
         }
 
         private void AddOnDuty_Load(object sender, EventArgs e)
@@ -43,6 +36,25 @@ namespace SQL_SecurityService
             this.сhiefsTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Сhiefs);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Guards". При необходимости она может быть перемещена или удалена.
             this.guardsTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Guards);
+
+            try
+            {
+                if (GuardID != null && ChiefID != null && PostId != null && ExitTime != null)
+                {
+                    textBox1.Text = ExitTime;
+                    comboBox2.SelectedValue = GuardID;
+                    comboBox3.SelectedValue = ChiefID;
+                    comboBox1.SelectedValue = PostId;
+                    Console.WriteLine("-----");
+                    Console.WriteLine(GuardID);
+                    Console.WriteLine(ChiefID);
+                    Console.WriteLine(PostId);
+                }
+            }
+            catch (System.Data.Common.DbException)
+            {
+                MessageBox.Show("Ошибка доступа к БД");
+            }
 
         }
 
@@ -65,22 +77,22 @@ namespace SQL_SecurityService
             //if (FIO != null && WorkExperience != null && Category != null)
             if (OnDutyID != null)
             {
-                //string sqlExpression = "UPDATE Guards SET FIO = @f, WorkExperience = @ff, Category = @fff, СhiefID = @ffff WHERE GuardID = @id";
+                string sqlExpression = "UPDATE OnDuty SET ExitTime = @f, GuardID = @ff, СhiefID = @fff, PostId = @ffff WHERE OnDutyID = @id";
 
-                //SqlParameter Param;
-                //command = new SqlCommand(sqlExpression, Program.MainForm.connect);
+                SqlParameter Param;
+                command = new SqlCommand(sqlExpression, Program.MainForm.connect);
 
-                //Param = new SqlParameter("@f", textBox1.Text);
-                //command.Parameters.Add(Param);
-                //Param = new SqlParameter("@ff", textBox2.Text);
-                //command.Parameters.Add(Param);
-                //Param = new SqlParameter("@fff", textBox3.Text);
-                //command.Parameters.Add(Param);
-                //Param = new SqlParameter("@ffff", Int32.Parse(comboBox1.SelectedValue.ToString()));
-                //command.Parameters.Add(Param);
-                //Param = new SqlParameter("@id", GuardID.ToString());
-                //command.Parameters.Add(Param);
-                //command.ExecuteNonQuery();
+                Param = new SqlParameter("@f", DateTime.Parse(textBox1.Text));
+                command.Parameters.Add(Param);
+                Param = new SqlParameter("@ff", Int32.Parse(comboBox2.SelectedValue.ToString()));
+                command.Parameters.Add(Param);
+                Param = new SqlParameter("@fff", Int32.Parse(comboBox3.SelectedValue.ToString()));
+                command.Parameters.Add(Param);
+                Param = new SqlParameter("@ffff", Int32.Parse(comboBox1.SelectedValue.ToString()));
+                command.Parameters.Add(Param);
+                Param = new SqlParameter("@id", OnDutyID);
+                command.Parameters.Add(Param);
+                command.ExecuteNonQuery();
             }
             else
             {

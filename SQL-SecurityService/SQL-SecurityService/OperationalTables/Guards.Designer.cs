@@ -44,15 +44,17 @@
             this.chiefWorkExperienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guardsviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
-            this.guards_viewTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.Guards_viewTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.сhiefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.сhiefsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter();
+            this.guardsviewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.guards_viewTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.Guards_viewTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardsviewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardsviewBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,7 +65,7 @@
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -115,13 +117,13 @@
             this.categoryDataGridViewTextBoxColumn,
             this.chiefFIODataGridViewTextBoxColumn,
             this.chiefWorkExperienceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.guardsviewBindingSource;
+            this.dataGridView1.DataSource = this.guardsviewBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 422);
             this.dataGridView1.TabIndex = 1;
             // 
             // guardIDDataGridViewTextBoxColumn
@@ -182,10 +184,6 @@
             this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
             this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // guards_viewTableAdapter
-            // 
-            this.guards_viewTableAdapter.ClearBeforeFill = true;
-            // 
             // comboBox1
             // 
             this.comboBox1.DataSource = this.сhiefsBindingSource;
@@ -207,6 +205,15 @@
             // 
             this.сhiefsTableAdapter.ClearBeforeFill = true;
             // 
+            // guardsviewBindingSource1
+            // 
+            this.guardsviewBindingSource1.DataMember = "Guards_view";
+            this.guardsviewBindingSource1.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
+            // guards_viewTableAdapter
+            // 
+            this.guards_viewTableAdapter.ClearBeforeFill = true;
+            // 
             // Guards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guardsviewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardsviewBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +249,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private SQL_SecurityServiceDataSet sQL_SecurityServiceDataSet;
         private System.Windows.Forms.BindingSource guardsviewBindingSource;
-        private SQL_SecurityServiceDataSetTableAdapters.Guards_viewTableAdapter guards_viewTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn guardIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn workExperienceDataGridViewTextBoxColumn;
@@ -251,5 +258,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource сhiefsBindingSource;
         private SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter сhiefsTableAdapter;
+        private System.Windows.Forms.BindingSource guardsviewBindingSource1;
+        private SQL_SecurityServiceDataSetTableAdapters.Guards_viewTableAdapter guards_viewTableAdapter;
     }
 }
