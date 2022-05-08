@@ -38,6 +38,8 @@ namespace SQL_SecurityService {
         
         private OnDuty_ViewDataTable tableOnDuty_View;
         
+        private Remarks_ViewDataTable tableRemarks_View;
+        
         private global::System.Data.DataRelation relationFK__Guards__СhiefID__32E0915F;
         
         private global::System.Data.DataRelation relationFK__OnDuty__GuardID__300424B4;
@@ -100,6 +102,9 @@ namespace SQL_SecurityService {
                 }
                 if ((ds.Tables["OnDuty_View"] != null)) {
                     base.Tables.Add(new OnDuty_ViewDataTable(ds.Tables["OnDuty_View"]));
+                }
+                if ((ds.Tables["Remarks_View"] != null)) {
+                    base.Tables.Add(new Remarks_ViewDataTable(ds.Tables["Remarks_View"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -191,6 +196,16 @@ namespace SQL_SecurityService {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Remarks_ViewDataTable Remarks_View {
+            get {
+                return this.tableRemarks_View;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -277,6 +292,9 @@ namespace SQL_SecurityService {
                 if ((ds.Tables["OnDuty_View"] != null)) {
                     base.Tables.Add(new OnDuty_ViewDataTable(ds.Tables["OnDuty_View"]));
                 }
+                if ((ds.Tables["Remarks_View"] != null)) {
+                    base.Tables.Add(new Remarks_ViewDataTable(ds.Tables["Remarks_View"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -352,6 +370,12 @@ namespace SQL_SecurityService {
                     this.tableOnDuty_View.InitVars();
                 }
             }
+            this.tableRemarks_View = ((Remarks_ViewDataTable)(base.Tables["Remarks_View"]));
+            if ((initTable == true)) {
+                if ((this.tableRemarks_View != null)) {
+                    this.tableRemarks_View.InitVars();
+                }
+            }
             this.relationFK__Guards__СhiefID__32E0915F = this.Relations["FK__Guards__СhiefID__32E0915F"];
             this.relationFK__OnDuty__GuardID__300424B4 = this.Relations["FK__OnDuty__GuardID__300424B4"];
             this.relationFK__OnDuty__PostID__30F848ED = this.Relations["FK__OnDuty__PostID__30F848ED"];
@@ -383,6 +407,8 @@ namespace SQL_SecurityService {
             base.Tables.Add(this.tableGuards_view);
             this.tableOnDuty_View = new OnDuty_ViewDataTable();
             base.Tables.Add(this.tableOnDuty_View);
+            this.tableRemarks_View = new Remarks_ViewDataTable();
+            base.Tables.Add(this.tableRemarks_View);
             this.relationFK__Guards__СhiefID__32E0915F = new global::System.Data.DataRelation("FK__Guards__СhiefID__32E0915F", new global::System.Data.DataColumn[] {
                         this.tableСhiefs.СhiefIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableGuards.СhiefIDColumn}, false);
@@ -452,6 +478,12 @@ namespace SQL_SecurityService {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeOnDuty_View() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeRemarks_View() {
             return false;
         }
         
@@ -531,6 +563,9 @@ namespace SQL_SecurityService {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void OnDuty_ViewRowChangeEventHandler(object sender, OnDuty_ViewRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Remarks_ViewRowChangeEventHandler(object sender, Remarks_ViewRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -546,7 +581,7 @@ namespace SQL_SecurityService {
             
             private global::System.Data.DataColumn columnWorkExperience;
             
-            private global::System.Data.DataColumn columnСategory;
+            private global::System.Data.DataColumn columnCategory;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -615,9 +650,9 @@ namespace SQL_SecurityService {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn СategoryColumn {
+            public global::System.Data.DataColumn CategoryColumn {
                 get {
-                    return this.columnСategory;
+                    return this.columnCategory;
                 }
             }
             
@@ -658,14 +693,14 @@ namespace SQL_SecurityService {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GuardsRow AddGuardsRow(СhiefsRow parentСhiefsRowByFK__Guards__СhiefID__32E0915F, string FIO, int WorkExperience, int Сategory) {
+            public GuardsRow AddGuardsRow(СhiefsRow parentСhiefsRowByFK__Guards__СhiefID__32E0915F, string FIO, int WorkExperience, int Category) {
                 GuardsRow rowGuardsRow = ((GuardsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         FIO,
                         WorkExperience,
-                        Сategory};
+                        Category};
                 if ((parentСhiefsRowByFK__Guards__СhiefID__32E0915F != null)) {
                     columnValuesArray[1] = parentСhiefsRowByFK__Guards__СhiefID__32E0915F[0];
                 }
@@ -702,7 +737,7 @@ namespace SQL_SecurityService {
                 this.columnСhiefID = base.Columns["СhiefID"];
                 this.columnFIO = base.Columns["FIO"];
                 this.columnWorkExperience = base.Columns["WorkExperience"];
-                this.columnСategory = base.Columns["Сategory"];
+                this.columnCategory = base.Columns["Category"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -716,8 +751,8 @@ namespace SQL_SecurityService {
                 base.Columns.Add(this.columnFIO);
                 this.columnWorkExperience = new global::System.Data.DataColumn("WorkExperience", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWorkExperience);
-                this.columnСategory = new global::System.Data.DataColumn("Сategory", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnСategory);
+                this.columnCategory = new global::System.Data.DataColumn("Category", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnGuardID}, true));
                 this.columnGuardID.AutoIncrement = true;
@@ -730,7 +765,7 @@ namespace SQL_SecurityService {
                 this.columnFIO.AllowDBNull = false;
                 this.columnFIO.MaxLength = 100;
                 this.columnWorkExperience.AllowDBNull = false;
-                this.columnСategory.AllowDBNull = false;
+                this.columnCategory.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2810,6 +2845,389 @@ namespace SQL_SecurityService {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Remarks_ViewDataTable : global::System.Data.TypedTableBase<Remarks_ViewRow> {
+            
+            private global::System.Data.DataColumn columnRemarkID;
+            
+            private global::System.Data.DataColumn columnRemark;
+            
+            private global::System.Data.DataColumn columnGuard_FIO;
+            
+            private global::System.Data.DataColumn columnGuard_WorkExperience;
+            
+            private global::System.Data.DataColumn columnGuard_Category;
+            
+            private global::System.Data.DataColumn columnChief_FIO;
+            
+            private global::System.Data.DataColumn columnChief_WorkExperience;
+            
+            private global::System.Data.DataColumn columnPost_Name;
+            
+            private global::System.Data.DataColumn columnPost_Location;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Remarks_ViewDataTable() {
+                this.TableName = "Remarks_View";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Remarks_ViewDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Remarks_ViewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RemarkIDColumn {
+                get {
+                    return this.columnRemarkID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RemarkColumn {
+                get {
+                    return this.columnRemark;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Guard_FIOColumn {
+                get {
+                    return this.columnGuard_FIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Guard_WorkExperienceColumn {
+                get {
+                    return this.columnGuard_WorkExperience;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Guard_CategoryColumn {
+                get {
+                    return this.columnGuard_Category;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Chief_FIOColumn {
+                get {
+                    return this.columnChief_FIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Chief_WorkExperienceColumn {
+                get {
+                    return this.columnChief_WorkExperience;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Post_NameColumn {
+                get {
+                    return this.columnPost_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Post_LocationColumn {
+                get {
+                    return this.columnPost_Location;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Remarks_ViewRow this[int index] {
+                get {
+                    return ((Remarks_ViewRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Remarks_ViewRowChangeEventHandler Remarks_ViewRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Remarks_ViewRowChangeEventHandler Remarks_ViewRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Remarks_ViewRowChangeEventHandler Remarks_ViewRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Remarks_ViewRowChangeEventHandler Remarks_ViewRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddRemarks_ViewRow(Remarks_ViewRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Remarks_ViewRow AddRemarks_ViewRow(int RemarkID, string Remark, string Guard_FIO, int Guard_WorkExperience, int Guard_Category, string Chief_FIO, int Chief_WorkExperience, string Post_Name, string Post_Location) {
+                Remarks_ViewRow rowRemarks_ViewRow = ((Remarks_ViewRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        RemarkID,
+                        Remark,
+                        Guard_FIO,
+                        Guard_WorkExperience,
+                        Guard_Category,
+                        Chief_FIO,
+                        Chief_WorkExperience,
+                        Post_Name,
+                        Post_Location};
+                rowRemarks_ViewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRemarks_ViewRow);
+                return rowRemarks_ViewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Remarks_ViewRow FindByRemarkID(int RemarkID) {
+                return ((Remarks_ViewRow)(this.Rows.Find(new object[] {
+                            RemarkID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Remarks_ViewDataTable cln = ((Remarks_ViewDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Remarks_ViewDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnRemarkID = base.Columns["RemarkID"];
+                this.columnRemark = base.Columns["Remark"];
+                this.columnGuard_FIO = base.Columns["Guard FIO"];
+                this.columnGuard_WorkExperience = base.Columns["Guard WorkExperience"];
+                this.columnGuard_Category = base.Columns["Guard Category"];
+                this.columnChief_FIO = base.Columns["Chief FIO"];
+                this.columnChief_WorkExperience = base.Columns["Chief WorkExperience"];
+                this.columnPost_Name = base.Columns["Post Name"];
+                this.columnPost_Location = base.Columns["Post Location"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnRemarkID = new global::System.Data.DataColumn("RemarkID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRemarkID);
+                this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRemark);
+                this.columnGuard_FIO = new global::System.Data.DataColumn("Guard FIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGuard_FIO);
+                this.columnGuard_WorkExperience = new global::System.Data.DataColumn("Guard WorkExperience", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGuard_WorkExperience);
+                this.columnGuard_Category = new global::System.Data.DataColumn("Guard Category", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGuard_Category);
+                this.columnChief_FIO = new global::System.Data.DataColumn("Chief FIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChief_FIO);
+                this.columnChief_WorkExperience = new global::System.Data.DataColumn("Chief WorkExperience", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChief_WorkExperience);
+                this.columnPost_Name = new global::System.Data.DataColumn("Post Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPost_Name);
+                this.columnPost_Location = new global::System.Data.DataColumn("Post Location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPost_Location);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnRemarkID}, true));
+                this.columnRemarkID.AllowDBNull = false;
+                this.columnRemarkID.Unique = true;
+                this.columnRemark.AllowDBNull = false;
+                this.columnRemark.MaxLength = 100;
+                this.columnGuard_FIO.AllowDBNull = false;
+                this.columnGuard_FIO.MaxLength = 100;
+                this.columnGuard_WorkExperience.AllowDBNull = false;
+                this.columnGuard_Category.AllowDBNull = false;
+                this.columnChief_FIO.AllowDBNull = false;
+                this.columnChief_FIO.MaxLength = 100;
+                this.columnChief_WorkExperience.AllowDBNull = false;
+                this.columnPost_Name.AllowDBNull = false;
+                this.columnPost_Name.MaxLength = 100;
+                this.columnPost_Location.AllowDBNull = false;
+                this.columnPost_Location.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Remarks_ViewRow NewRemarks_ViewRow() {
+                return ((Remarks_ViewRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Remarks_ViewRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Remarks_ViewRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Remarks_ViewRowChanged != null)) {
+                    this.Remarks_ViewRowChanged(this, new Remarks_ViewRowChangeEvent(((Remarks_ViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Remarks_ViewRowChanging != null)) {
+                    this.Remarks_ViewRowChanging(this, new Remarks_ViewRowChangeEvent(((Remarks_ViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Remarks_ViewRowDeleted != null)) {
+                    this.Remarks_ViewRowDeleted(this, new Remarks_ViewRowChangeEvent(((Remarks_ViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Remarks_ViewRowDeleting != null)) {
+                    this.Remarks_ViewRowDeleting(this, new Remarks_ViewRowChangeEvent(((Remarks_ViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveRemarks_ViewRow(Remarks_ViewRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SQL_SecurityServiceDataSet ds = new SQL_SecurityServiceDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Remarks_ViewDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class GuardsRow : global::System.Data.DataRow {
@@ -2869,12 +3287,12 @@ namespace SQL_SecurityService {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Сategory {
+            public int Category {
                 get {
-                    return ((int)(this[this.tableGuards.СategoryColumn]));
+                    return ((int)(this[this.tableGuards.CategoryColumn]));
                 }
                 set {
-                    this[this.tableGuards.СategoryColumn] = value;
+                    this[this.tableGuards.CategoryColumn] = value;
                 }
             }
             
@@ -3454,6 +3872,120 @@ namespace SQL_SecurityService {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Remarks_ViewRow : global::System.Data.DataRow {
+            
+            private Remarks_ViewDataTable tableRemarks_View;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Remarks_ViewRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableRemarks_View = ((Remarks_ViewDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int RemarkID {
+                get {
+                    return ((int)(this[this.tableRemarks_View.RemarkIDColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.RemarkIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Remark {
+                get {
+                    return ((string)(this[this.tableRemarks_View.RemarkColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.RemarkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Guard_FIO {
+                get {
+                    return ((string)(this[this.tableRemarks_View.Guard_FIOColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.Guard_FIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Guard_WorkExperience {
+                get {
+                    return ((int)(this[this.tableRemarks_View.Guard_WorkExperienceColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.Guard_WorkExperienceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Guard_Category {
+                get {
+                    return ((int)(this[this.tableRemarks_View.Guard_CategoryColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.Guard_CategoryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Chief_FIO {
+                get {
+                    return ((string)(this[this.tableRemarks_View.Chief_FIOColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.Chief_FIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Chief_WorkExperience {
+                get {
+                    return ((int)(this[this.tableRemarks_View.Chief_WorkExperienceColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.Chief_WorkExperienceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Post_Name {
+                get {
+                    return ((string)(this[this.tableRemarks_View.Post_NameColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.Post_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Post_Location {
+                get {
+                    return ((string)(this[this.tableRemarks_View.Post_LocationColumn]));
+                }
+                set {
+                    this[this.tableRemarks_View.Post_LocationColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -3690,6 +4222,40 @@ namespace SQL_SecurityService {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Remarks_ViewRowChangeEvent : global::System.EventArgs {
+            
+            private Remarks_ViewRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Remarks_ViewRowChangeEvent(Remarks_ViewRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Remarks_ViewRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters {
@@ -3820,43 +4386,43 @@ namespace SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("СhiefID", "СhiefID");
             tableMapping.ColumnMappings.Add("FIO", "FIO");
             tableMapping.ColumnMappings.Add("WorkExperience", "WorkExperience");
-            tableMapping.ColumnMappings.Add("Сategory", "Сategory");
+            tableMapping.ColumnMappings.Add("Category", "Category");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Guards] WHERE (([GuardID] = @Original_GuardID) AND ([СhiefID] " +
-                "= @Original_СhiefID) AND ([FIO] = @Original_FIO) AND ([WorkExperience] = @Origin" +
-                "al_WorkExperience) AND ([Сategory] = @Original_Сategory))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Guards] WHERE (([GuardID] = @Original_GuardID) AND ([СhiefID] = @Ori" +
+                "ginal_СhiefID) AND ([FIO] = @Original_FIO) AND ([WorkExperience] = @Original_Wor" +
+                "kExperience) AND ([Category] = @Original_Category))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GuardID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GuardID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_СhiefID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СhiefID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FIO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WorkExperience", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkExperience", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Сategory", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сategory", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Category", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Category", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Guards] ([СhiefID], [FIO], [WorkExperience], [Сategory]) VALUE" +
-                "S (@СhiefID, @FIO, @WorkExperience, @Сategory);\r\nSELECT GuardID, СhiefID, FIO, W" +
-                "orkExperience, Сategory FROM Guards WHERE (GuardID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Guards] ([СhiefID], [FIO], [WorkExperience], [Category]) VALUES (@Сh" +
+                "iefID, @FIO, @WorkExperience, @Category);\r\nSELECT GuardID, СhiefID, FIO, WorkExp" +
+                "erience, Category FROM Guards WHERE (GuardID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@СhiefID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СhiefID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkExperience", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkExperience", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Сategory", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сategory", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Category", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Category", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Guards] SET [СhiefID] = @СhiefID, [FIO] = @FIO, [WorkExperience] = @WorkExperience, [Сategory] = @Сategory WHERE (([GuardID] = @Original_GuardID) AND ([СhiefID] = @Original_СhiefID) AND ([FIO] = @Original_FIO) AND ([WorkExperience] = @Original_WorkExperience) AND ([Сategory] = @Original_Сategory));
-SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (GuardID = @GuardID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Guards] SET [СhiefID] = @СhiefID, [FIO] = @FIO, [WorkExperience] = @WorkExperience, [Category] = @Category WHERE (([GuardID] = @Original_GuardID) AND ([СhiefID] = @Original_СhiefID) AND ([FIO] = @Original_FIO) AND ([WorkExperience] = @Original_WorkExperience) AND ([Category] = @Original_Category));
+SELECT GuardID, СhiefID, FIO, WorkExperience, Category FROM Guards WHERE (GuardID = @GuardID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@СhiefID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СhiefID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkExperience", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkExperience", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Сategory", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сategory", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Category", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Category", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GuardID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GuardID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_СhiefID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "СhiefID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FIO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WorkExperience", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkExperience", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Сategory", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Сategory", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Category", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Category", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GuardID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GuardID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3873,7 +4439,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory, Category FROM Guards";
+            this._commandCollection[0].CommandText = "SELECT GuardID, СhiefID, FIO, WorkExperience, Category FROM Guards";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3934,7 +4500,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_GuardID, int Original_СhiefID, string Original_FIO, int Original_WorkExperience, int Original_Сategory) {
+        public virtual int Delete(int Original_GuardID, int Original_СhiefID, string Original_FIO, int Original_WorkExperience, int Original_Category) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_GuardID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_СhiefID));
             if ((Original_FIO == null)) {
@@ -3944,7 +4510,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_FIO));
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_WorkExperience));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Сategory));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Category));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3965,7 +4531,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int СhiefID, string FIO, int WorkExperience, int Сategory) {
+        public virtual int Insert(int СhiefID, string FIO, int WorkExperience, int Category) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(СhiefID));
             if ((FIO == null)) {
                 throw new global::System.ArgumentNullException("FIO");
@@ -3974,7 +4540,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FIO));
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(WorkExperience));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Сategory));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Category));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3995,7 +4561,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int СhiefID, string FIO, int WorkExperience, int Сategory, int Original_GuardID, int Original_СhiefID, string Original_FIO, int Original_WorkExperience, int Original_Сategory, int GuardID) {
+        public virtual int Update(int СhiefID, string FIO, int WorkExperience, int Category, int Original_GuardID, int Original_СhiefID, string Original_FIO, int Original_WorkExperience, int Original_Category, int GuardID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(СhiefID));
             if ((FIO == null)) {
                 throw new global::System.ArgumentNullException("FIO");
@@ -4004,7 +4570,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FIO));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(WorkExperience));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Сategory));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Category));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_GuardID));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_СhiefID));
             if ((Original_FIO == null)) {
@@ -4014,7 +4580,7 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_FIO));
             }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_WorkExperience));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Сategory));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Category));
             this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(GuardID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4036,8 +4602,8 @@ SELECT GuardID, СhiefID, FIO, WorkExperience, Сategory FROM Guards WHERE (Guar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int СhiefID, string FIO, int WorkExperience, int Сategory, int Original_GuardID, int Original_СhiefID, string Original_FIO, int Original_WorkExperience, int Original_Сategory) {
-            return this.Update(СhiefID, FIO, WorkExperience, Сategory, Original_GuardID, Original_СhiefID, Original_FIO, Original_WorkExperience, Original_Сategory, Original_GuardID);
+        public virtual int Update(int СhiefID, string FIO, int WorkExperience, int Category, int Original_GuardID, int Original_СhiefID, string Original_FIO, int Original_WorkExperience, int Original_Category) {
+            return this.Update(СhiefID, FIO, WorkExperience, Category, Original_GuardID, Original_СhiefID, Original_FIO, Original_WorkExperience, Original_Category, Original_GuardID);
         }
     }
     
@@ -5730,6 +6296,183 @@ SELECT СhiefID, FIO, WorkExperience FROM Сhiefs WHERE (СhiefID = @СhiefID)";
         public virtual SQL_SecurityServiceDataSet.OnDuty_ViewDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             SQL_SecurityServiceDataSet.OnDuty_ViewDataTable dataTable = new SQL_SecurityServiceDataSet.OnDuty_ViewDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Remarks_ViewTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Remarks_ViewTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Remarks_View";
+            tableMapping.ColumnMappings.Add("RemarkID", "RemarkID");
+            tableMapping.ColumnMappings.Add("Remark", "Remark");
+            tableMapping.ColumnMappings.Add("Guard FIO", "Guard FIO");
+            tableMapping.ColumnMappings.Add("Guard WorkExperience", "Guard WorkExperience");
+            tableMapping.ColumnMappings.Add("Guard Category", "Guard Category");
+            tableMapping.ColumnMappings.Add("Chief FIO", "Chief FIO");
+            tableMapping.ColumnMappings.Add("Chief WorkExperience", "Chief WorkExperience");
+            tableMapping.ColumnMappings.Add("Post Name", "Post Name");
+            tableMapping.ColumnMappings.Add("Post Location", "Post Location");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SQL_SecurityService.Properties.Settings.Default.SQL_SecurityServiceConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT RemarkID, Remark, [Guard FIO], [Guard WorkExperience], [Guard Category], [" +
+                "Chief FIO], [Chief WorkExperience], [Post Name], [Post Location] FROM dbo.Remark" +
+                "s_View";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SQL_SecurityServiceDataSet.Remarks_ViewDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SQL_SecurityServiceDataSet.Remarks_ViewDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            SQL_SecurityServiceDataSet.Remarks_ViewDataTable dataTable = new SQL_SecurityServiceDataSet.Remarks_ViewDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
