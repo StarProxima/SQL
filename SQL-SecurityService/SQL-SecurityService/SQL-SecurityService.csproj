@@ -46,48 +46,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.cs">
+    <Compile Include="MainMenu\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="About.Designer.cs">
+    <Compile Include="MainMenu\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chiefs.cs">
+    <Compile Include="ReferenceTables\Chiefs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chiefs.Designer.cs">
+    <Compile Include="ReferenceTables\Chiefs.Designer.cs">
       <DependentUpon>Chiefs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guards.cs">
+    <Compile Include="OperationalTables\Guards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guards.Designer.cs">
+    <Compile Include="OperationalTables\Guards.Designer.cs">
       <DependentUpon>Guards.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="MainMenu\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="MainMenu\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OnDuty.cs">
+    <Compile Include="OperationalTables\OnDuty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OnDuty.Designer.cs">
+    <Compile Include="OperationalTables\OnDuty.Designer.cs">
       <DependentUpon>OnDuty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Posts.cs">
+    <Compile Include="ReferenceTables\Posts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Posts.Designer.cs">
+    <Compile Include="ReferenceTables\Posts.Designer.cs">
       <DependentUpon>Posts.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Remarks.cs">
+    <Compile Include="OperationalTables\Remarks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Remarks.Designer.cs">
+    <Compile Include="OperationalTables\Remarks.Designer.cs">
       <DependentUpon>Remarks.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL_SecurityServiceDataSet.cs">
@@ -98,22 +98,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SQL_SecurityServiceDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="About.resx">
+    <EmbeddedResource Include="MainMenu\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chiefs.resx">
+    <EmbeddedResource Include="ReferenceTables\Chiefs.resx">
       <DependentUpon>Chiefs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guards.resx">
+    <EmbeddedResource Include="OperationalTables\Guards.resx">
       <DependentUpon>Guards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="MainMenu\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OnDuty.resx">
+    <EmbeddedResource Include="OperationalTables\OnDuty.resx">
       <DependentUpon>OnDuty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Posts.resx">
+    <EmbeddedResource Include="ReferenceTables\Posts.resx">
       <DependentUpon>Posts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -125,7 +125,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Remarks.resx">
+    <EmbeddedResource Include="OperationalTables\Remarks.resx">
       <DependentUpon>Remarks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
