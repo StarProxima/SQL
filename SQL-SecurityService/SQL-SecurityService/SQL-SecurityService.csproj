@@ -58,12 +58,6 @@
     <Compile Include="Chiefs.Designer.cs">
       <DependentUpon>Chiefs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guards.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Guards.Designer.cs">
-      <DependentUpon>Guards.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,9 +79,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chiefs.resx">
       <DependentUpon>Chiefs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Guards.resx">
-      <DependentUpon>Guards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

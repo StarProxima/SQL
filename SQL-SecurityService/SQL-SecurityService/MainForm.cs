@@ -37,8 +37,7 @@ namespace SQL_SecurityService
 
         private void охранникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Guards guards = new Guards();
-            guards.Show();
+
         }
 
         private void начальникиToolStripMenuItem_Click(object sender, EventArgs e)
