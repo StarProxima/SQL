@@ -32,7 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.данныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.охранникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.постыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дежурстваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.замечанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +69,6 @@
             // 
             this.данныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.охранникиToolStripMenuItem,
-            this.постыToolStripMenuItem,
             this.дежурстваToolStripMenuItem,
             this.замечанияToolStripMenuItem});
             this.данныеToolStripMenuItem.Name = "данныеToolStripMenuItem";
@@ -84,12 +82,6 @@
             this.охранникиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.охранникиToolStripMenuItem.Text = "Охранники";
             this.охранникиToolStripMenuItem.Click += new System.EventHandler(this.охранникиToolStripMenuItem_Click);
-            // 
-            // постыToolStripMenuItem
-            // 
-            this.постыToolStripMenuItem.Name = "постыToolStripMenuItem";
-            this.постыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.постыToolStripMenuItem.Text = "Посты";
             // 
             // дежурстваToolStripMenuItem
             // 
@@ -197,7 +189,6 @@
         private System.Windows.Forms.BindingSource guardsBindingSource;
         private SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter guardsTableAdapter;
         private System.Windows.Forms.ToolStripMenuItem охранникиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem постыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дежурстваToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem замечанияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem начальникиToolStripMenuItem;
