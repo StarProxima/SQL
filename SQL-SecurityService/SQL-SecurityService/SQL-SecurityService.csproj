@@ -70,6 +70,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OnDuty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnDuty.Designer.cs">
+      <DependentUpon>OnDuty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Posts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnDuty.resx">
+      <DependentUpon>OnDuty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Posts.resx">
       <DependentUpon>Posts.cs</DependentUpon>

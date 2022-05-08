@@ -1,6 +1,6 @@
 ﻿namespace SQL_SecurityService
 {
-    partial class Guards
+    partial class OnDuty
     {
         /// <summary>
         /// Required designer variable.
@@ -36,19 +36,21 @@
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guardIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workExperienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
+            this.onDutyViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.onDuty_ViewTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.OnDuty_ViewTableAdapter();
+            this.onDutyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exitTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guardFIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guardWorkExperienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chiefFIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chiefWorkExperienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guardsviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
-            this.guards_viewTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.Guards_viewTableAdapter();
+            this.postNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guardsviewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -60,7 +62,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // операцииToolStripMenuItem
@@ -102,52 +104,68 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.guardIDDataGridViewTextBoxColumn,
-            this.fIODataGridViewTextBoxColumn,
-            this.workExperienceDataGridViewTextBoxColumn,
-            this.categoryDataGridViewTextBoxColumn,
+            this.onDutyIDDataGridViewTextBoxColumn,
+            this.exitTimeDataGridViewTextBoxColumn,
+            this.guardFIODataGridViewTextBoxColumn,
+            this.guardWorkExperienceDataGridViewTextBoxColumn,
             this.chiefFIODataGridViewTextBoxColumn,
-            this.chiefWorkExperienceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.guardsviewBindingSource;
+            this.chiefWorkExperienceDataGridViewTextBoxColumn,
+            this.postNameDataGridViewTextBoxColumn,
+            this.postLocationDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.onDutyViewBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(800, 422);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 2;
             // 
-            // guardIDDataGridViewTextBoxColumn
+            // sQL_SecurityServiceDataSet
             // 
-            this.guardIDDataGridViewTextBoxColumn.DataPropertyName = "GuardID";
-            this.guardIDDataGridViewTextBoxColumn.HeaderText = "GuardID";
-            this.guardIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.guardIDDataGridViewTextBoxColumn.Name = "guardIDDataGridViewTextBoxColumn";
-            this.guardIDDataGridViewTextBoxColumn.Width = 125;
+            this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
+            this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // fIODataGridViewTextBoxColumn
+            // onDutyViewBindingSource
             // 
-            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
-            this.fIODataGridViewTextBoxColumn.HeaderText = "FIO";
-            this.fIODataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
-            this.fIODataGridViewTextBoxColumn.Width = 125;
+            this.onDutyViewBindingSource.DataMember = "OnDuty_View";
+            this.onDutyViewBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
             // 
-            // workExperienceDataGridViewTextBoxColumn
+            // onDuty_ViewTableAdapter
             // 
-            this.workExperienceDataGridViewTextBoxColumn.DataPropertyName = "WorkExperience";
-            this.workExperienceDataGridViewTextBoxColumn.HeaderText = "WorkExperience";
-            this.workExperienceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.workExperienceDataGridViewTextBoxColumn.Name = "workExperienceDataGridViewTextBoxColumn";
-            this.workExperienceDataGridViewTextBoxColumn.Width = 125;
+            this.onDuty_ViewTableAdapter.ClearBeforeFill = true;
             // 
-            // categoryDataGridViewTextBoxColumn
+            // onDutyIDDataGridViewTextBoxColumn
             // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.Width = 125;
+            this.onDutyIDDataGridViewTextBoxColumn.DataPropertyName = "OnDutyID";
+            this.onDutyIDDataGridViewTextBoxColumn.HeaderText = "OnDutyID";
+            this.onDutyIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.onDutyIDDataGridViewTextBoxColumn.Name = "onDutyIDDataGridViewTextBoxColumn";
+            this.onDutyIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // exitTimeDataGridViewTextBoxColumn
+            // 
+            this.exitTimeDataGridViewTextBoxColumn.DataPropertyName = "ExitTime";
+            this.exitTimeDataGridViewTextBoxColumn.HeaderText = "ExitTime";
+            this.exitTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.exitTimeDataGridViewTextBoxColumn.Name = "exitTimeDataGridViewTextBoxColumn";
+            this.exitTimeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // guardFIODataGridViewTextBoxColumn
+            // 
+            this.guardFIODataGridViewTextBoxColumn.DataPropertyName = "Guard FIO";
+            this.guardFIODataGridViewTextBoxColumn.HeaderText = "Guard FIO";
+            this.guardFIODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.guardFIODataGridViewTextBoxColumn.Name = "guardFIODataGridViewTextBoxColumn";
+            this.guardFIODataGridViewTextBoxColumn.Width = 125;
+            // 
+            // guardWorkExperienceDataGridViewTextBoxColumn
+            // 
+            this.guardWorkExperienceDataGridViewTextBoxColumn.DataPropertyName = "Guard WorkExperience";
+            this.guardWorkExperienceDataGridViewTextBoxColumn.HeaderText = "Guard WorkExperience";
+            this.guardWorkExperienceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.guardWorkExperienceDataGridViewTextBoxColumn.Name = "guardWorkExperienceDataGridViewTextBoxColumn";
+            this.guardWorkExperienceDataGridViewTextBoxColumn.Width = 125;
             // 
             // chiefFIODataGridViewTextBoxColumn
             // 
@@ -165,36 +183,37 @@
             this.chiefWorkExperienceDataGridViewTextBoxColumn.Name = "chiefWorkExperienceDataGridViewTextBoxColumn";
             this.chiefWorkExperienceDataGridViewTextBoxColumn.Width = 125;
             // 
-            // guardsviewBindingSource
+            // postNameDataGridViewTextBoxColumn
             // 
-            this.guardsviewBindingSource.DataMember = "Guards_view";
-            this.guardsviewBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            this.postNameDataGridViewTextBoxColumn.DataPropertyName = "Post Name";
+            this.postNameDataGridViewTextBoxColumn.HeaderText = "Post Name";
+            this.postNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.postNameDataGridViewTextBoxColumn.Name = "postNameDataGridViewTextBoxColumn";
+            this.postNameDataGridViewTextBoxColumn.Width = 125;
             // 
-            // sQL_SecurityServiceDataSet
+            // postLocationDataGridViewTextBoxColumn
             // 
-            this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
-            this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.postLocationDataGridViewTextBoxColumn.DataPropertyName = "Post Location";
+            this.postLocationDataGridViewTextBoxColumn.HeaderText = "Post Location";
+            this.postLocationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.postLocationDataGridViewTextBoxColumn.Name = "postLocationDataGridViewTextBoxColumn";
+            this.postLocationDataGridViewTextBoxColumn.Width = 125;
             // 
-            // guards_viewTableAdapter
-            // 
-            this.guards_viewTableAdapter.ClearBeforeFill = true;
-            // 
-            // Guards
+            // OnDuty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Guards";
-            this.Text = "Guards";
-            this.Load += new System.EventHandler(this.Guards_Load);
+            this.Name = "OnDuty";
+            this.Text = "OnDuty";
+            this.Load += new System.EventHandler(this.OnDuty_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guardsviewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onDutyViewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,13 +229,15 @@
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private SQL_SecurityServiceDataSet sQL_SecurityServiceDataSet;
-        private System.Windows.Forms.BindingSource guardsviewBindingSource;
-        private SQL_SecurityServiceDataSetTableAdapters.Guards_viewTableAdapter guards_viewTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn guardIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn workExperienceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource onDutyViewBindingSource;
+        private SQL_SecurityServiceDataSetTableAdapters.OnDuty_ViewTableAdapter onDuty_ViewTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn onDutyIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exitTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn guardFIODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn guardWorkExperienceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn chiefFIODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn chiefWorkExperienceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postLocationDataGridViewTextBoxColumn;
     }
 }

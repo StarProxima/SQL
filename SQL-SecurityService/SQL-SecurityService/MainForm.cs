@@ -60,5 +60,11 @@ namespace SQL_SecurityService
             Posts posts = new Posts();
             posts.Show();
         }
+
+        private void дежурстваToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OnDuty onDuty = new OnDuty();
+            onDuty.Show();
+        }
     }
 }

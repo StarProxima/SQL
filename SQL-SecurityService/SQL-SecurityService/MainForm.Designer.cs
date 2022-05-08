@@ -36,6 +36,7 @@
             this.замечанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.начальникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.постыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,6 @@
             this.sQLSecurityServiceDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter();
-            this.постыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLSecurityServiceDataSetBindingSource)).BeginInit();
@@ -88,6 +88,7 @@
             this.дежурстваToolStripMenuItem.Name = "дежурстваToolStripMenuItem";
             this.дежурстваToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.дежурстваToolStripMenuItem.Text = "Дежурства";
+            this.дежурстваToolStripMenuItem.Click += new System.EventHandler(this.дежурстваToolStripMenuItem_Click);
             // 
             // замечанияToolStripMenuItem
             // 
@@ -107,9 +108,16 @@
             // начальникиToolStripMenuItem
             // 
             this.начальникиToolStripMenuItem.Name = "начальникиToolStripMenuItem";
-            this.начальникиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.начальникиToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.начальникиToolStripMenuItem.Text = "Начальники";
             this.начальникиToolStripMenuItem.Click += new System.EventHandler(this.начальникиToolStripMenuItem_Click);
+            // 
+            // постыToolStripMenuItem1
+            // 
+            this.постыToolStripMenuItem1.Name = "постыToolStripMenuItem1";
+            this.постыToolStripMenuItem1.Size = new System.Drawing.Size(177, 26);
+            this.постыToolStripMenuItem1.Text = "Посты";
+            this.постыToolStripMenuItem1.Click += new System.EventHandler(this.постыToolStripMenuItem1_Click);
             // 
             // отчётыToolStripMenuItem
             // 
@@ -148,13 +156,6 @@
             // guardsTableAdapter
             // 
             this.guardsTableAdapter.ClearBeforeFill = true;
-            // 
-            // постыToolStripMenuItem1
-            // 
-            this.постыToolStripMenuItem1.Name = "постыToolStripMenuItem1";
-            this.постыToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.постыToolStripMenuItem1.Text = "Посты";
-            this.постыToolStripMenuItem1.Click += new System.EventHandler(this.постыToolStripMenuItem1_Click);
             // 
             // MainForm
             // 
