@@ -38,13 +38,15 @@
             this.начальникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.постыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
             this.sQLSecurityServiceDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter();
-            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.журналВыходаНаДежурствоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.журналУчётаЗамечанийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLSecurityServiceDataSetBindingSource)).BeginInit();
@@ -124,10 +126,19 @@
             // отчётыToolStripMenuItem
             // 
             this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.экспортToolStripMenuItem});
+            this.экспортToolStripMenuItem,
+            this.журналВыходаНаДежурствоToolStripMenuItem,
+            this.журналУчётаЗамечанийToolStripMenuItem});
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
             this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // экспортToolStripMenuItem
+            // 
+            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
+            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+            this.экспортToolStripMenuItem.Text = "Экспорт";
+            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.экспортToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -162,12 +173,18 @@
             // 
             this.guardsTableAdapter.ClearBeforeFill = true;
             // 
-            // экспортToolStripMenuItem
+            // журналВыходаНаДежурствоToolStripMenuItem
             // 
-            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.экспортToolStripMenuItem.Text = "Экспорт";
-            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.экспортToolStripMenuItem_Click);
+            this.журналВыходаНаДежурствоToolStripMenuItem.Name = "журналВыходаНаДежурствоToolStripMenuItem";
+            this.журналВыходаНаДежурствоToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+            this.журналВыходаНаДежурствоToolStripMenuItem.Text = "Журнал выхода на дежурство";
+            this.журналВыходаНаДежурствоToolStripMenuItem.Click += new System.EventHandler(this.журналВыходаНаДежурствоToolStripMenuItem_Click);
+            // 
+            // журналУчётаЗамечанийToolStripMenuItem
+            // 
+            this.журналУчётаЗамечанийToolStripMenuItem.Name = "журналУчётаЗамечанийToolStripMenuItem";
+            this.журналУчётаЗамечанийToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+            this.журналУчётаЗамечанийToolStripMenuItem.Text = "Журнал учёта замечаний";
             // 
             // MainForm
             // 
@@ -207,6 +224,8 @@
         private System.Windows.Forms.ToolStripMenuItem начальникиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem постыToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem экспортToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem журналВыходаНаДежурствоToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem журналУчётаЗамечанийToolStripMenuItem;
     }
 }
 

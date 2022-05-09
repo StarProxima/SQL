@@ -144,6 +144,7 @@ namespace SQL_SecurityService
                     saveFileDialog1.FileName = "";
                 }
             }
+
             if (checkBox3.Checked)
             {
                 saveFileDialog1.DefaultExt = "html";
@@ -171,6 +172,11 @@ namespace SQL_SecurityService
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.OnDuty_View". При необходимости она может быть перемещена или удалена.
             this.onDuty_ViewTableAdapter.Fill(this.sQL_SecurityServiceDataSet.OnDuty_View);
 
+        }
+
+        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

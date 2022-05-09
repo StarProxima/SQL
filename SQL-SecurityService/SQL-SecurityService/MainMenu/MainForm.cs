@@ -83,5 +83,11 @@ namespace SQL_SecurityService
             Export export = new Export();
             export.Show();
         }
+
+        private void журналВыходаНаДежурствоToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OnDutyReport onDutyReport = new OnDutyReport();
+            onDutyReport.Show();
+        }
     }
 }
