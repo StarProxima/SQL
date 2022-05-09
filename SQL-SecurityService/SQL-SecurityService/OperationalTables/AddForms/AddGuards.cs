@@ -131,10 +131,6 @@ namespace SQL_SecurityService
             {
                 MessageBox.Show("Ошибка доступа к БД");
             }
-
-            
-
-            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

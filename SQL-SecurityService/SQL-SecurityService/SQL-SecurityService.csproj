@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OperationalTables\AddForms\AddRemarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationalTables\AddForms\AddRemarks.Designer.cs">
+      <DependentUpon>AddRemarks.cs</DependentUpon>
+    </Compile>
     <Compile Include="OperationalTables\AddForms\AddOnDuty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SQL_SecurityServiceDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OperationalTables\AddForms\AddRemarks.resx">
+      <DependentUpon>AddRemarks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OperationalTables\AddForms\AddGuards.resx">
       <DependentUpon>AddGuards.cs</DependentUpon>
     </EmbeddedResource>

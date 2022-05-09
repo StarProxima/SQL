@@ -11,24 +11,24 @@ using System.Windows.Forms;
 
 namespace SQL_SecurityService
 {
-    public partial class AddOnDuty : Form
+    public partial class AddRemarks : Form
     {
-        string OnDutyID;
+        string RemarkID;
         string GuardID;
-        string ChiefID; 
-        string PostId; 
-        string ExitTime;
-        public AddOnDuty(string OnDutyID, string ExitTime, string GuardID, string ChiefID, string PostId)
+        string ChiefID;
+        string PostId;
+        string Remark;
+        public AddRemarks(string RemarkID, string Reamark, string GuardID, string ChiefID, string PostId)
         {
             InitializeComponent();
-            this.OnDutyID = OnDutyID;
+            this.RemarkID = RemarkID;
             this.GuardID = GuardID;
             this.ChiefID = ChiefID;
             this.PostId = PostId;
-            this.ExitTime = ExitTime;
+            this.Remark = Reamark;
         }
 
-        private void AddOnDuty_Load(object sender, EventArgs e)
+        private void AddRemarks_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "sQL_SecurityServiceDataSet.Posts". При необходимости она может быть перемещена или удалена.
             this.postsTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Posts);
@@ -39,9 +39,9 @@ namespace SQL_SecurityService
 
             try
             {
-                if (GuardID != null && ChiefID != null && PostId != null && ExitTime != null)
+                if (GuardID != null && ChiefID != null && PostId != null && Remark != null)
                 {
-                    textBox1.Text = ExitTime;
+                    textBox1.Text = Remark;
                     comboBox2.SelectedValue = GuardID;
                     comboBox3.SelectedValue = ChiefID;
                     comboBox1.SelectedValue = PostId;
@@ -66,23 +66,17 @@ namespace SQL_SecurityService
                 MessageBox.Show("Введите все данные.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            DateTime n;
-            if (!DateTime.TryParse(textBox1.Text, out n))
-            {
-                MessageBox.Show("Введены некорректыне данные.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
 
             SqlCommand command;
             //if (FIO != null && WorkExperience != null && Category != null)
-            if (OnDutyID != null)
+            if (RemarkID != null)
             {
-                string sqlExpression = "UPDATE OnDuty SET ExitTime = @f, GuardID = @ff, СhiefID = @fff, PostId = @ffff WHERE OnDutyID = @id";
+                string sqlExpression = "UPDATE Remarks SET Remark = @f, GuardID = @ff, СhiefID = @fff, PostId = @ffff WHERE RemarkID = @id";
 
                 SqlParameter Param;
                 command = new SqlCommand(sqlExpression, Program.MainForm.connect);
 
-                Param = new SqlParameter("@f", DateTime.Parse(textBox1.Text));
+                Param = new SqlParameter("@f", textBox1.Text);
                 command.Parameters.Add(Param);
                 Param = new SqlParameter("@ff", Int32.Parse(comboBox2.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
@@ -90,19 +84,19 @@ namespace SQL_SecurityService
                 command.Parameters.Add(Param);
                 Param = new SqlParameter("@ffff", Int32.Parse(comboBox1.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
-                Param = new SqlParameter("@id", OnDutyID);
+                Param = new SqlParameter("@id", RemarkID);
                 command.Parameters.Add(Param);
                 command.ExecuteNonQuery();
             }
             else
             {
-                string sqlExpression = "INSERT INTO OnDuty (ExitTime, GuardID, СhiefID, PostId)" +
+                string sqlExpression = "INSERT INTO Remarks (Remark, GuardID, СhiefID, PostId)" +
                                         "VALUES (@f, @ff, @fff, @ffff)";
 
                 SqlParameter Param;
                 command = new SqlCommand(sqlExpression, Program.MainForm.connect);
 
-                Param = new SqlParameter("@f", DateTime.Parse(textBox1.Text));
+                Param = new SqlParameter("@f", textBox1.Text);
                 command.Parameters.Add(Param);
                 Param = new SqlParameter("@ff", Int32.Parse(comboBox1.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
@@ -119,46 +113,6 @@ namespace SQL_SecurityService
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
