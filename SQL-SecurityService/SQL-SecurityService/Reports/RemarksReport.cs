@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SQL_SecurityService
 {
-    public partial class OnDutyReport : Form
+    public partial class RemarksReport : Form
     {
-        public OnDutyReport()
+        public RemarksReport()
         {
             InitializeComponent();
-        }
-
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

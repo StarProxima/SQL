@@ -30,7 +30,7 @@ namespace SQL_SecurityService
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CrystalReport11 = new SQL_SecurityService.CrystalReport1();
+            this.CrystalReport11 = new SQL_SecurityService.Reports.CrystalReport1();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -42,15 +42,14 @@ namespace SQL_SecurityService
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ReportSource = this.CrystalReport11;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1276, 450);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1210, 450);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // OnDutyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1276, 450);
+            this.ClientSize = new System.Drawing.Size(1210, 450);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "OnDutyReport";
             this.Text = "OnDutyReport";
@@ -61,6 +60,6 @@ namespace SQL_SecurityService
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private CrystalReport1 CrystalReport11;
+        private Reports.CrystalReport1 CrystalReport11;
     }
 }

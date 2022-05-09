@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SQL_SecurityService {
+namespace SQL_SecurityService.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace SQL_SecurityService {
         
         public override string FullResourceName {
             get {
-                return "SQL_SecurityService.CrystalReport1.rpt";
+                return "SQL_SecurityService.Reports.CrystalReport1.rpt";
             }
             set {
                 // Do nothing

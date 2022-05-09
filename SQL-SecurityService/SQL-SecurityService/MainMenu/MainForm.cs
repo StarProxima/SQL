@@ -89,5 +89,11 @@ namespace SQL_SecurityService
             OnDutyReport onDutyReport = new OnDutyReport();
             onDutyReport.Show();
         }
+
+        private void журналУчётаЗамечанийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemarksReport remarksReport = new RemarksReport();
+            remarksReport.Show();
+        }
     }
 }

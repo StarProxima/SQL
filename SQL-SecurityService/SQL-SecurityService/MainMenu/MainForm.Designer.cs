@@ -185,6 +185,7 @@
             this.журналУчётаЗамечанийToolStripMenuItem.Name = "журналУчётаЗамечанийToolStripMenuItem";
             this.журналУчётаЗамечанийToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
             this.журналУчётаЗамечанийToolStripMenuItem.Text = "Журнал учёта замечаний";
+            this.журналУчётаЗамечанийToolStripMenuItem.Click += new System.EventHandler(this.журналУчётаЗамечанийToolStripMenuItem_Click);
             // 
             // MainForm
             // 
