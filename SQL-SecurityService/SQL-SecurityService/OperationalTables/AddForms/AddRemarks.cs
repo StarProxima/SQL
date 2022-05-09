@@ -98,17 +98,33 @@ namespace SQL_SecurityService
 
                 Param = new SqlParameter("@f", textBox1.Text);
                 command.Parameters.Add(Param);
-                Param = new SqlParameter("@ff", Int32.Parse(comboBox1.SelectedValue.ToString()));
+                Param = new SqlParameter("@ff", Int32.Parse(comboBox2.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
-                Param = new SqlParameter("@fff", Int32.Parse(comboBox2.SelectedValue.ToString()));
+                Param = new SqlParameter("@fff", Int32.Parse(comboBox3.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
-                Param = new SqlParameter("@ffff", Int32.Parse(comboBox3.SelectedValue.ToString()));
+                Param = new SqlParameter("@ffff", Int32.Parse(comboBox1.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
                 command.ExecuteNonQuery();
             }
 
             this.Close();
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {

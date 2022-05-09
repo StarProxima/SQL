@@ -47,15 +47,15 @@ namespace SQL_SecurityService
         {
             string OnDutyID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
-            string sqlExpression = "SELECT GuardID FROM Remarks WHERE RemarksID = " + OnDutyID;
+            string sqlExpression = "SELECT GuardID FROM Remarks WHERE RemarkID = " + OnDutyID;
             SqlCommand command = new SqlCommand(sqlExpression, Program.MainForm.connect);
             string GuardID = command.ExecuteScalar().ToString();
 
-            sqlExpression = "SELECT СhiefID FROM Remarks WHERE RemarksID = " + OnDutyID;
+            sqlExpression = "SELECT СhiefID FROM Remarks WHERE RemarkID = " + OnDutyID;
             command = new SqlCommand(sqlExpression, Program.MainForm.connect);
             string ChiefID = command.ExecuteScalar().ToString();
 
-            sqlExpression = "SELECT PostID FROM Remarks WHERE RemarksID = " + OnDutyID;
+            sqlExpression = "SELECT PostID FROM Remarks WHERE RemarkID = " + OnDutyID;
             command = new SqlCommand(sqlExpression, Program.MainForm.connect);
             string PostID = command.ExecuteScalar().ToString();
 
@@ -66,7 +66,7 @@ namespace SQL_SecurityService
 
         private void удалитьToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            string sqlExpression = "DELETE FROM Remarks WHERE RemarksID = " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            string sqlExpression = "DELETE FROM Remarks WHERE RemarkID = " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
             SqlCommand command = new SqlCommand(sqlExpression, Program.MainForm.connect);
             command.ExecuteNonQuery();
             this.remarks_ViewTableAdapter.Fill(this.sQL_SecurityServiceDataSet.Remarks_View);

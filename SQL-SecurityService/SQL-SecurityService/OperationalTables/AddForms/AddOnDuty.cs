@@ -104,11 +104,11 @@ namespace SQL_SecurityService
 
                 Param = new SqlParameter("@f", DateTime.Parse(textBox1.Text));
                 command.Parameters.Add(Param);
-                Param = new SqlParameter("@ff", Int32.Parse(comboBox1.SelectedValue.ToString()));
+                Param = new SqlParameter("@ff", Int32.Parse(comboBox2.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
-                Param = new SqlParameter("@fff", Int32.Parse(comboBox2.SelectedValue.ToString()));
+                Param = new SqlParameter("@fff", Int32.Parse(comboBox3.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
-                Param = new SqlParameter("@ffff", Int32.Parse(comboBox3.SelectedValue.ToString()));
+                Param = new SqlParameter("@ffff", Int32.Parse(comboBox1.SelectedValue.ToString()));
                 command.Parameters.Add(Param);
                 command.ExecuteNonQuery();
             }
