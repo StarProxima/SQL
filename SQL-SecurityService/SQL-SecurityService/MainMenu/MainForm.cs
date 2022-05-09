@@ -77,5 +77,11 @@ namespace SQL_SecurityService
         {
             this.Close();
         }
+
+        private void экспортToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Export export = new Export();
+            export.Show();
+        }
     }
 }

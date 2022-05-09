@@ -44,6 +44,7 @@
             this.sQLSecurityServiceDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guardsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter();
+            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQLSecurityServiceDataSetBindingSource)).BeginInit();
@@ -122,6 +123,8 @@
             // 
             // отчётыToolStripMenuItem
             // 
+            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.экспортToolStripMenuItem});
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
             this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
@@ -158,6 +161,13 @@
             // guardsTableAdapter
             // 
             this.guardsTableAdapter.ClearBeforeFill = true;
+            // 
+            // экспортToolStripMenuItem
+            // 
+            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
+            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.экспортToolStripMenuItem.Text = "Экспорт";
+            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.экспортToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -196,6 +206,7 @@
         private System.Windows.Forms.ToolStripMenuItem замечанияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem начальникиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem постыToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem экспортToolStripMenuItem;
     }
 }
 
