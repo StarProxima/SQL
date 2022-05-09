@@ -72,5 +72,10 @@ namespace SQL_SecurityService
             Remarks remarks = new Remarks();
             remarks.Show();
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

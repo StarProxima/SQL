@@ -74,5 +74,11 @@ namespace SQL_SecurityService
             if(comboBox1.SelectedIndex >= 0)
                 UpdateView();
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.MainForm.Activate();
+        }
     }
 }

@@ -36,20 +36,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.postsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.sQL_SecurityServiceDataSet = new SQL_SecurityService.SQL_SecurityServiceDataSet();
             this.guardsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.guardsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.сhiefsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.guardsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.GuardsTableAdapter();
             this.сhiefsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.СhiefsTableAdapter();
-            this.postsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postsTableAdapter = new SQL_SecurityService.SQL_SecurityServiceDataSetTableAdapters.PostsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -60,6 +60,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -118,6 +119,16 @@
             this.comboBox1.TabIndex = 13;
             this.comboBox1.ValueMember = "PostID";
             // 
+            // postsBindingSource
+            // 
+            this.postsBindingSource.DataMember = "Posts";
+            this.postsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
+            // sQL_SecurityServiceDataSet
+            // 
+            this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
+            this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(374, 107);
@@ -136,6 +147,11 @@
             this.comboBox2.TabIndex = 20;
             this.comboBox2.ValueMember = "GuardID";
             // 
+            // guardsBindingSource
+            // 
+            this.guardsBindingSource.DataMember = "Guards";
+            this.guardsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
+            // 
             // comboBox3
             // 
             this.comboBox3.DataSource = this.сhiefsBindingSource;
@@ -147,33 +163,18 @@
             this.comboBox3.TabIndex = 21;
             this.comboBox3.ValueMember = "СhiefID";
             // 
-            // sQL_SecurityServiceDataSet
-            // 
-            this.sQL_SecurityServiceDataSet.DataSetName = "SQL_SecurityServiceDataSet";
-            this.sQL_SecurityServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // guardsBindingSource
-            // 
-            this.guardsBindingSource.DataMember = "Guards";
-            this.guardsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
-            // 
-            // guardsTableAdapter
-            // 
-            this.guardsTableAdapter.ClearBeforeFill = true;
-            // 
             // сhiefsBindingSource
             // 
             this.сhiefsBindingSource.DataMember = "Сhiefs";
             this.сhiefsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
             // 
+            // guardsTableAdapter
+            // 
+            this.guardsTableAdapter.ClearBeforeFill = true;
+            // 
             // сhiefsTableAdapter
             // 
             this.сhiefsTableAdapter.ClearBeforeFill = true;
-            // 
-            // postsBindingSource
-            // 
-            this.postsBindingSource.DataMember = "Posts";
-            this.postsBindingSource.DataSource = this.sQL_SecurityServiceDataSet;
             // 
             // postsTableAdapter
             // 
@@ -197,10 +198,10 @@
             this.Name = "AddOnDuty";
             this.Text = "AddOnDuty";
             this.Load += new System.EventHandler(this.AddOnDuty_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sQL_SecurityServiceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.сhiefsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
